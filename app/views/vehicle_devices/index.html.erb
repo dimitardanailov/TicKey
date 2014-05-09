@@ -1,0 +1,31 @@
+<h1>Listing vehicle_devices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Unique</th>
+      <th>Major</th>
+      <th>Minor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehicle_devices.each do |vehicle_device| %>
+      <tr>
+        <td><%= vehicle_device.unique_id %></td>
+        <td><%= vehicle_device.major %></td>
+        <td><%= vehicle_device.minor %></td>
+        <td><%= link_to 'Show', vehicle_device %></td>
+        <td><%= link_to 'Edit', edit_vehicle_device_path(vehicle_device) %></td>
+        <td><%= link_to 'Destroy', vehicle_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vehicle device', new_vehicle_device_path %>

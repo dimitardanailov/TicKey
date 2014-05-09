@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Line:</strong>
+  <%= @line_device.line_id %>
+</p>
+
+<p>
+  <strong>Vehicle device:</strong>
+  <%= @line_device.vehicle_device_id %>
+</p>
+
+<%= link_to 'Edit', edit_line_device_path(@line_device) %> |
+<%= link_to 'Back', line_devices_path %>

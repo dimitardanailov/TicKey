@@ -1,0 +1,10 @@
+class CreateTransportCardTypes < ActiveRecord::Migration
+  def change
+    create_table :transport_card_types do |t|
+      t.string :name,
+        :null => false
+
+      t.timestamps
+    end
+  end
+end

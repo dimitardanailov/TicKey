@@ -1,0 +1,33 @@
+<h1>Listing card_purches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Transport card type</th>
+      <th>Line</th>
+      <th>Expire date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @card_purches.each do |card_purch| %>
+      <tr>
+        <td><%= card_purch.user_id %></td>
+        <td><%= card_purch.transport_card_type_id %></td>
+        <td><%= card_purch.line_id %></td>
+        <td><%= card_purch.expire_date %></td>
+        <td><%= link_to 'Show', card_purch %></td>
+        <td><%= link_to 'Edit', edit_card_purch_path(card_purch) %></td>
+        <td><%= link_to 'Destroy', card_purch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Card purch', new_card_purch_path %>

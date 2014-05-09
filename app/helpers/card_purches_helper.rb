@@ -1,0 +1,2 @@
+module CardPurchesHelper
+end

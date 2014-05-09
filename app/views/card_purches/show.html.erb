@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @card_purch.user_id %>
+</p>
+
+<p>
+  <strong>Transport card type:</strong>
+  <%= @card_purch.transport_card_type_id %>
+</p>
+
+<p>
+  <strong>Line:</strong>
+  <%= @card_purch.line_id %>
+</p>
+
+<p>
+  <strong>Expire date:</strong>
+  <%= @card_purch.expire_date %>
+</p>
+
+<%= link_to 'Edit', edit_card_purch_path(@card_purch) %> |
+<%= link_to 'Back', card_purches_path %>

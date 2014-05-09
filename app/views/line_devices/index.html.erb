@@ -1,0 +1,29 @@
+<h1>Listing line_devices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Line</th>
+      <th>Vehicle device</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @line_devices.each do |line_device| %>
+      <tr>
+        <td><%= line_device.line_id %></td>
+        <td><%= line_device.vehicle_device_id %></td>
+        <td><%= link_to 'Show', line_device %></td>
+        <td><%= link_to 'Edit', edit_line_device_path(line_device) %></td>
+        <td><%= link_to 'Destroy', line_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Line device', new_line_device_path %>

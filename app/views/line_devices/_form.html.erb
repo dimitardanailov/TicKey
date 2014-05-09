@@ -1,0 +1,25 @@
+<%= form_for(@line_device) do |f| %>
+  <% if @line_device.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@line_device.errors.count, "error") %> prohibited this line_device from being saved:</h2>
+
+      <ul>
+      <% @line_device.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :line_id %><br>
+    <%= f.number_field :line_id %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_device_id %><br>
+    <%= f.number_field :vehicle_device_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

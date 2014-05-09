@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unique:</strong>
+  <%= @vehicle_device.unique_id %>
+</p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @vehicle_device.major %>
+</p>
+
+<p>
+  <strong>Minor:</strong>
+  <%= @vehicle_device.minor %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_device_path(@vehicle_device) %> |
+<%= link_to 'Back', vehicle_devices_path %>

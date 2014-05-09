@@ -1,0 +1,2 @@
+module LineDevicesHelper
+end

@@ -1,0 +1,27 @@
+<h1>Listing transport_card_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transport_card_types.each do |transport_card_type| %>
+      <tr>
+        <td><%= transport_card_type.name %></td>
+        <td><%= link_to 'Show', transport_card_type %></td>
+        <td><%= link_to 'Edit', edit_transport_card_type_path(transport_card_type) %></td>
+        <td><%= link_to 'Destroy', transport_card_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transport card type', new_transport_card_type_path %>
