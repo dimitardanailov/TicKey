@@ -59,6 +59,8 @@ gem 'kaminari'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'startapp'
+
 # Install plugins for production
 group :production do
   # required for JS runtime
