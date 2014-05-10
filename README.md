@@ -21,3 +21,7 @@ http://tickey.herokuapp.com/transport_card_types
 Vehicle Devices
 
 http://tickey.herokuapp.com/vehicle_devices
+
+JSON Examples:
+
+http://tickey.herokuapp.com/transport_card_types.json
