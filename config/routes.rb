@@ -1,4 +1,13 @@
 TicKey::Application.routes.draw do
+
+  scope "/users" do
+    post '/authenticate' => 'users#authenticate',
+      as: :user_authenticate
+
+    post "/register_user" => "users#register_user",
+      as: :user_register
+  end
+
   resources :card_purches
 
   resources :line_devices
