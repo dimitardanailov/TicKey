@@ -10,6 +10,7 @@ TicKey::Application.routes.draw do
   
   scope "/vehicle_devices" do
     get "line_name_by_uuid/:uuid" => "vehicle_devices#get_line_name_by_uuid"
+    get "get_vehicle_users/:uuid" => "vehicle_devices#get_vehicle_users"
   end
 
   scope "/card_purches" do

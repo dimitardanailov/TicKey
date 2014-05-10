@@ -5335,3 +5335,498 @@ Processing by CardPurchesController#get_active_tickets_by_uuid_and_user as JSON
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
   [1m[35mCACHE (0.1ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1  [["id", 1]]
 Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/vehicle_devices" for 127.0.0.1 at 2014-05-11 00:24:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by VehicleDevicesController#index as HTML
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices`
+  Rendered vehicle_devices/index.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 443ms (Views: 368.3ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-11 00:24:36 +0300
+
+
+Started GET "/vehicle_devices/1" for 127.0.0.1 at 2014-05-11 00:24:54 +0300
+Processing by VehicleDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicleDevice Load (0.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 LIMIT 1[0m
+  Rendered vehicle_devices/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho" for 127.0.0.1 at 2014-05-11 00:24:58 +0300
+Processing by VehicleDevicesController#get_vehicle_users as HTML
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.5ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.5ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 444ms
+
+NoMethodError (undefined method `line' for #<VehicleDevice:0x00000101c96c90>):
+  app/controllers/vehicle_devices_controller.rb:99:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.5ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho" for 127.0.0.1 at 2014-05-11 00:25:12 +0300
+Processing by VehicleDevicesController#get_vehicle_users as HTML
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.3ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
+Completed 406 Not Acceptable in 118ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/vehicle_devices_controller.rb:103:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.4ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:25:18 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.5ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.4ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:27:00 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.3ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `get_line_name_by_device' for #<VehicleDevicesController:0x000001068f20f8>):
+  app/controllers/vehicle_devices_controller.rb:99:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.5ms)
+
+
+Started GET "/vehicle_devices/line_name_by_uuid/gosho.json" for 127.0.0.1 at 2014-05-11 00:27:12 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.9ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `get_line_name_by_device' for #<VehicleDevicesController:0x00000106a06e08>):
+  app/controllers/vehicle_devices_controller.rb:73:in `get_line_name_by_uuid'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.2ms)
+
+
+Started GET "/vehicle_devices/line_name_by_uuid/gosho.json" for 127.0.0.1 at 2014-05-11 00:27:28 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.3ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.4ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 55ms
+
+NoMethodError (undefined method `name' for "102A":String):
+  app/controllers/vehicle_devices_controller.rb:76:in `get_line_name_by_uuid'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/vehicle_devices/line_name_by_uuid/gosho.json" for 127.0.0.1 at 2014-05-11 00:27:40 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.3ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.4ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 94ms
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/controllers/vehicle_devices_controller.rb:76:in `[]'
+  app/controllers/vehicle_devices_controller.rb:76:in `get_line_name_by_uuid'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/vehicle_devices/line_name_by_uuid/gosho.json" for 127.0.0.1 at 2014-05-11 00:29:45 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.3ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.6ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 44ms
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/controllers/vehicle_devices_controller.rb:76:in `[]'
+  app/controllers/vehicle_devices_controller.rb:76:in `get_line_name_by_uuid'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.1ms)
+
+
+Started GET "/vehicle_devices/line_name_by_uuid/gosho.json" for 127.0.0.1 at 2014-05-11 00:30:24 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+Completed 200 OK in 94ms (Views: 5.6ms | ActiveRecord: 48.9ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:30:31 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.6ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 29ms
+
+NoMethodError (undefined method `get_line_name_by_device' for #<VehicleDevicesController:0x0000010698dc38>):
+  app/controllers/vehicle_devices_controller.rb:99:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:30:33 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `get_line_name_by_device' for #<VehicleDevicesController:0x0000010164da50>):
+  app/controllers/vehicle_devices_controller.rb:99:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.8ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:30:34 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.5ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `get_line_name_by_device' for #<VehicleDevicesController:0x0000010144b400>):
+  app/controllers/vehicle_devices_controller.rb:99:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:30:35 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `get_line_name_by_device' for #<VehicleDevicesController:0x00000101c25090>):
+  app/controllers/vehicle_devices_controller.rb:99:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.2ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:30:46 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.3ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLineDevice Load (0.5ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 52ms
+
+NoMethodError (undefined method `line' for #<VehicleDevice:0x00000103daf8a0>):
+  app/controllers/vehicle_devices_controller.rb:103:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.7ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.7ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:30:52 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.9ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 56ms
+
+NoMethodError (undefined method `line' for #<VehicleDevice:0x00000103cec0a8>):
+  app/controllers/vehicle_devices_controller.rb:103:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:31:31 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.3ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLineDevice Load (0.3ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1
+  [1m[36mLine Load (0.7ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 52ms (Views: 0.3ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:41:40 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+Completed 500 Internal Server Error in 70ms
+
+NoMethodError (undefined method `get_count_of_user_active_purches_by_line_id' for #<Class:0x00000103dbe5d0>):
+  app/controllers/vehicle_devices_controller.rb:106:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.4ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:42:02 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.3ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLineDevice Load (0.3ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1
+  [1m[36mLine Load (0.3ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 156ms
+
+NameError (undefined local variable or method `user_id' for #<Class:0x00000106b66988>):
+  app/models/card_purch.rb:39:in `get_count_of_user_active_purches_by_line_id'
+  app/controllers/vehicle_devices_controller.rb:106:in `get_vehicle_users'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:43:34 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCardPurch Load (0.6ms)[0m  [1mSELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = NULL AND expire_date >= '2014-05-10 21:43:34') ORDER BY active_purches DESC[0m
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:43:36 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.5ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCardPurch Load (0.5ms)[0m  [1mSELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = NULL AND expire_date >= '2014-05-10 21:43:36') ORDER BY active_purches DESC[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:43:37 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCardPurch Load (0.3ms)[0m  [1mSELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = NULL AND expire_date >= '2014-05-10 21:43:37') ORDER BY active_purches DESC[0m
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/card_purches/user_active_cards/1/gosho.json" for 127.0.0.1 at 2014-05-11 00:45:28 +0300
+Processing by CardPurchesController#get_active_tickets_by_uuid_and_user as JSON
+  Parameters: {"user_id"=>"1", "uuid"=>"gosho"}
+  [1m[35mCardPurch Load (0.9ms)[0m  SELECT id, line_id, expire_date FROM `card_purches` WHERE (user_id = '1' AND expire_date >= '2014-05-10 21:45:28') ORDER BY expire_date ASC
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 79ms (Views: 0.6ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:45:32 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLineDevice Load (0.3ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1
+  [1m[36mLine Load (2.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mCardPurch Load (0.4ms)[0m  SELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = 1 AND expire_date >= '2014-05-10 21:45:32') ORDER BY active_purches DESC
+Completed 200 OK in 93ms (Views: 0.3ms | ActiveRecord: 61.3ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:46:37 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mCardPurch Load (22.2ms)[0m  SELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = 1 AND expire_date >= '2014-05-10 21:46:37') GROUP BY user_id ORDER BY active_purches DESC
+Completed 200 OK in 143ms (Views: 0.9ms | ActiveRecord: 71.5ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:47:24 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.3ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLineDevice Load (0.3ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1
+  [1m[36mLine Load (0.3ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mCardPurch Load (0.5ms)[0m  SELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = 1 AND expire_date >= '2014-05-10 21:47:24') GROUP BY user_id ORDER BY active_purches DESC
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 579ms (Views: 0.4ms | ActiveRecord: 51.5ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:48:28 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.3ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.4ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCardPurch Load (0.5ms)[0m  [1mSELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = 1 AND expire_date >= '2014-05-10 21:48:29') GROUP BY user_id ORDER BY active_purches DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 91ms (Views: 0.7ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/vehicle_devices/line_name_by_uuid/gosho.json" for 127.0.0.1 at 2014-05-11 00:49:02 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.6ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLineDevice Load (0.5ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/vehicle_devices/line_name_by_uuid/gosho.json" for 127.0.0.1 at 2014-05-11 00:49:03 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.5ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:49:04 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[36mVehicleDevice Load (0.5ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLineDevice Load (0.3ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mCardPurch Load (0.7ms)[0m  SELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = 1 AND expire_date >= '2014-05-10 21:49:04') GROUP BY user_id ORDER BY active_purches DESC
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/vehicle_devices/get_vehicle_users/gosho.json" for 127.0.0.1 at 2014-05-11 00:49:06 +0300
+Processing by VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"uuid"=>"gosho"}
+  [1m[35mVehicleDevice Load (0.5ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'gosho' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`vehicle_device_id` = 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCardPurch Load (0.5ms)[0m  [1mSELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = 1 AND expire_date >= '2014-05-10 21:49:06') GROUP BY user_id ORDER BY active_purches DESC[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 2.6ms)

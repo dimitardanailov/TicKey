@@ -61,6 +61,8 @@ class VehicleDevicesController < ApplicationController
     end
   end
 
+  # Get line name by uuid
+  # uuid is route param
   def get_line_name_by_uuid
     param_keys = ["uuid"]
     params_are_valid = check_params_keys_exist_into_request(param_keys, params)
@@ -68,13 +70,10 @@ class VehicleDevicesController < ApplicationController
 
     if params_are_valid
       device = VehicleDevice.where(:unique_id => params[:uuid]).first
+      line = get_line_by_device(device)
 
-      unless device.blank?
-        line_devices = device.line_devices
-
-        line_devices.each do |line_device|
-          line_name = line_device.line.name
-        end
+      unless line.blank?
+        line_name = line[:name]
       end
     end
 
@@ -83,6 +82,49 @@ class VehicleDevicesController < ApplicationController
 
     respond_to do |format|
       format.json { render :json => line , :status => 200 }
+    end
+  end
+
+  # Get line name and user tickets information by uuid
+  # uuid is route param
+  def get_vehicle_users
+    param_keys = ["uuid"]
+    params_are_valid = check_params_keys_exist_into_request(param_keys, params)
+    vehicle_info = Hash.new
+    vehicle_info[:line_name] = nil
+    vehicle_info[:users] = Array.new
+
+    if params_are_valid
+      device = VehicleDevice.where(:unique_id => params[:uuid]).first
+      line = get_line_by_device(device)
+
+      unless line.blank?
+        vehicle_info[:line_name] = line[:name]
+
+        line_id = line[:id]
+        db_purches = 
+          CardPurch.get_count_of_user_active_purches_by_line_id(line_id)
+
+        db_purches.each do |ticket_info|
+          unless ticket_info[:user_id].blank?
+            user = ticket_info.user
+
+            unless user.blank?
+              user_info = Hash.new
+              user_info[:active_cards_count] = ticket_info[:active_purches]
+              user_info[:first_name] = user[:first_name]
+              user_info[:last_name] = user[:last_name]
+              user_info[:pin] = user[:pin]
+
+              vehicle_info[:users].push(user_info)
+            end
+          end
+        end
+      end
+    end
+
+    respond_to do |format|
+      format.json { render :json => vehicle_info , :status => 200 }
     end
   end
 
@@ -95,5 +137,21 @@ class VehicleDevicesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def vehicle_device_params
       params.require(:vehicle_device).permit(:unique_id, :major, :minor)
+    end
+
+    # Use foreign key relatinship to get line name
+    def get_line_by_device(device)
+      line = nil
+
+      unless device.blank?
+        line_devices = device.line_devices
+
+        line_devices.each do |line_device|
+          line = line_device.line
+          break
+        end
+      end
+
+      return line
     end
 end
