@@ -32,6 +32,9 @@ JSON Examples Get:
 
 http://tickey.herokuapp.com/transport_card_types.json
 
+http://tickey.herokuapp.com/vehicle_devices/line_name_by_uuid/(:uuid).json
+
+
 JSON Examples Post: 
 ==========
 
