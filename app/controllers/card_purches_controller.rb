@@ -1,5 +1,9 @@
 class CardPurchesController < ApplicationController
+  include CardPurchesHelper
   before_action :set_card_purch, only: [:show, :edit, :update, :destroy]
+
+  # http://stackoverflow.com/questions/16258911/rails-4-authenticity-token
+  protect_from_forgery with: :null_session
 
   # GET /card_purches
   # GET /card_purches.json
@@ -58,6 +62,50 @@ class CardPurchesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to card_purches_url }
       format.json { head :no_content }
+    end
+  end
+
+  def make_card_purches
+    # generate_testing_data_create_purchase
+    param_keys = ["user_id", "line_name", "card_type"]
+    params_are_valid = check_params_keys_exist_into_request(param_keys, params)
+    success = false
+
+    puts YAML::dump params
+
+    if params_are_valid
+      begin
+       card_purches = CardPurch.new 
+       card_purches[:user_id] = params[:user_id]
+       card_purches[:expire_date] = CardPurch.generate_expire_date
+
+       # Get line info
+       line = Line.where("name = ?", params[:line_name]).first
+       unless line.blank?
+         card_purches[:line_id] = line[:id]
+       end
+
+       # Get transport card type
+       card_type = TransportCardType.where("name = ?", params[:card_type]).first
+       unless card_type.blank?
+         card_purches[:transport_card_type_id] = card_type[:id]
+       end
+
+       if card_purches.valid?
+         card_purches.save
+         success = true
+       end
+
+      rescue => ex
+        puts YAML::dump ex
+      end
+    end
+
+    json_data = Hash.new
+    json_data[:success] = success
+
+    respond_to do |format|
+      format.json { render :json => json_data , :status => 200 }
     end
   end
 

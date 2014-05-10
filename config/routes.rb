@@ -12,6 +12,10 @@ TicKey::Application.routes.draw do
     get 'line_name_by_uuid/:uuid' => 'vehicle_devices#get_line_name_by_uuid'
   end
 
+  scope "/card_purches" do
+    post "make_order" => "card_purches#make_card_purches"
+  end
+
   resources :card_purches
 
   resources :line_devices

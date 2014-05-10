@@ -4763,3 +4763,256 @@ Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
   [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
 Completed 200 OK in 113ms (Views: 0.2ms | ActiveRecord: 78.6ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 22:55:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CardPurchesController#make_card_purches as JSON
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 22:56:05 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `generate_testing_data_create_purchase' for #<CardPurchesController:0x00000101b5cb90>):
+  app/controllers/card_purches_controller.rb:65:in `make_card_purches'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.2ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 22:59:30 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.3ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+  [1m[36mLine Load (19.9ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE (name = 1) ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.4ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+Completed 200 OK in 624ms (Views: 0.2ms | ActiveRecord: 65.9ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:00:35 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.2ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.5ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = 1) ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.3ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:01:07 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mLine Load (0.2ms)[0m  [1mSELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.2ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.4ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+Completed 200 OK in 113ms (Views: 0.4ms | ActiveRecord: 64.9ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:02:02 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (1.1ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.8ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (1.6ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 80ms (Views: 0.2ms | ActiveRecord: 29.6ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:03:00 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mLine Load (0.2ms)[0m  [1mSELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.3ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.3ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:03:56 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.2ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.5ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.5ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.3ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 76ms (Views: 0.7ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:04:26 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mLine Load (0.2ms)[0m  [1mSELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.6ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.3ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+Completed 200 OK in 71ms (Views: 0.3ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:05:15 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.3ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (66.7ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:05:15', '2014-05-12 20:05:15', 102, 1, '2014-05-10 20:05:15', 1)[0m
+Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`tickey`.`card_purches`, CONSTRAINT `card_purches_line_id_fk` FOREIGN KEY (`line_id`) REFERENCES `lines` (`id`) ON DELETE CASCADE): INSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:05:15', '2014-05-12 20:05:15', 102, 1, '2014-05-10 20:05:15', 1)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+Completed 200 OK in 197ms (Views: 0.2ms | ActiveRecord: 105.2ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:05:27 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.2ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:05:27', '2014-05-12 20:05:27', 102, 1, '2014-05-10 20:05:27', 1)[0m
+Mysql2::Error: Cannot add or update a child row: a foreign key constraint fails (`tickey`.`card_purches`, CONSTRAINT `card_purches_line_id_fk` FOREIGN KEY (`line_id`) REFERENCES `lines` (`id`) ON DELETE CASCADE): INSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:05:27', '2014-05-12 20:05:27', 102, 1, '2014-05-10 20:05:27', 1)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+Completed 200 OK in 78ms (Views: 0.2ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:06:20 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.2ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.3ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.5ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:06:20', '2014-05-12 20:06:20', 1, 1, '2014-05-10 20:06:20', 1)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 128ms (Views: 0.9ms | ActiveRecord: 64.9ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:06:21 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.3ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.3ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:06:21', '2014-05-12 20:06:21', 1, 1, '2014-05-10 20:06:21', 1)[0m
+  [1m[35m (23.3ms)[0m  COMMIT
+Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:06:22 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.2ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.3ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:06:22', '2014-05-12 20:06:22', 1, 1, '2014-05-10 20:06:22', 1)[0m
+  [1m[35m (24.1ms)[0m  COMMIT
+Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:06:23 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.6ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.5ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:06:23', '2014-05-12 20:06:23', 1, 1, '2014-05-10 20:06:23', 1)[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:06:23 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (2.9ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (5.1ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.5ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.6ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:06:23', '2014-05-12 20:06:23', 1, 1, '2014-05-10 20:06:23', 1)[0m
+  [1m[35m (18.5ms)[0m  COMMIT
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:06:23 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (4.7ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.6ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.5ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.3ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:06:23', '2014-05-12 20:06:23', 1, 1, '2014-05-10 20:06:23', 1)[0m
+  [1m[35m (32.4ms)[0m  COMMIT
+Completed 200 OK in 55ms (Views: 0.2ms | ActiveRecord: 41.7ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:06:23 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.5ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.6ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:06:24', '2014-05-12 20:06:23', 1, 1, '2014-05-10 20:06:24', 1)[0m
+  [1m[35m (6.2ms)[0m  COMMIT
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:06:24 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.5ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE (name = '102A') ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = 'Test') ORDER BY `transport_card_types`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-05-10 20:06:24', '2014-05-12 20:06:24', 1, 1, '2014-05-10 20:06:24', 1)[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:07:22 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:07:23 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:07:24 +0300
+Processing by CardPurchesController#make_card_purches as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/card_purches/make_order.json" for 127.0.0.1 at 2014-05-10 23:07:35 +0300
+Processing by CardPurchesController#show as JSON
+  Parameters: {"id"=>"make_order"}
+  [1m[36mCardPurch Load (0.2ms)[0m  [1mSELECT `card_purches`.* FROM `card_purches` WHERE `card_purches`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 10ms
+
+ActiveRecord::RecordNotFound (Couldn't find CardPurch with id=make_order):
+  app/controllers/card_purches_controller.rb:115:in `set_card_purch'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.9ms)

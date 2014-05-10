@@ -32,6 +32,10 @@ JSON Examples Get:
 
 http://tickey.herokuapp.com/transport_card_types.json
 
+http://tickey.herokuapp.com/vehicle_devices/line_name_by_uuid/:uuid.json
+- params[:uuid]
+
+
 JSON Examples Post: 
 ==========
 
@@ -45,4 +49,10 @@ http://tickey.herokuapp.com/users/register_user.json
 - params[:first_name]
 - params[:last_name]
 - params[:pin]
+
+http://tickey.herokuapp.com/card_purches/make_order.json
+
+- params[:user_id]
+- params[:line_name]
+- params[:card_type]
 
