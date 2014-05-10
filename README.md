@@ -1,6 +1,10 @@
 Domain: 
+==========
 
 http://tickey.herokuapp.com/
+
+CMS:
+==========
 
 Users:
 
@@ -22,14 +26,13 @@ Vehicle Devices
 
 http://tickey.herokuapp.com/vehicle_devices
 
-JSON Examples:
 
-Get
+JSON Examples Get: 
 ==========
 
 http://tickey.herokuapp.com/transport_card_types.json
 
-Post
+JSON Examples Post: 
 ==========
 
 http://tickey.herokuapp.com/users/authenticate.json
