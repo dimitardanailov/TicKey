@@ -35,6 +35,9 @@ http://tickey.herokuapp.com/transport_card_types.json
 http://tickey.herokuapp.com/vehicle_devices/line_name_by_uuid/:uuid.json
 - params[:uuid]
 
+http://tickey.herokuapp.com/card_purches/user_active_cards/:user_id/:uuid.json
+- params[:user_id]
+- params[:uuid]
 
 JSON Examples Post: 
 ==========
