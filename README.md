@@ -38,3 +38,11 @@ JSON Examples Post:
 http://tickey.herokuapp.com/users/authenticate.json
 - params[:email]
 - params[:password]. Password must be sha1
+
+http://tickey.herokuapp.com/users/register_user.json
+- params[:email]
+- params[:password]. Password must be sha1
+- params[:first_name]
+- params[:last_name]
+- params[:pin]
+
