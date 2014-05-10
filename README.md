@@ -32,7 +32,7 @@ JSON Examples Get:
 
 http://tickey.herokuapp.com/transport_card_types.json
 
-http://tickey.herokuapp.com/vehicle_devices/line_name_by_uuid/2324234234234234.json
+http://tickey.herokuapp.com/vehicle_devices/line_name_by_uuid/:uuid.json
 - params[:uuid]
 
 
