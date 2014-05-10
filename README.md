@@ -25,3 +25,7 @@ http://tickey.herokuapp.com/vehicle_devices
 JSON Examples:
 
 http://tickey.herokuapp.com/transport_card_types.json
+
+http://tickey.herokuapp.com/users/authenticate.json
+- params[:email]
+- params[:password]. Password must be sha1
