@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :line_id %><br>
-    <%= f.number_field :line_id %>
+    <%= select_tag "line_device[line_id]", options_from_collection_for_select(@lines, "id", "name") %>
   </div>
   <div class="field">
     <%= f.label :vehicle_device_id %><br>
-    <%= f.number_field :vehicle_device_id %>
+    <%= select_tag "line_device[vehicle_device_id]", options_from_collection_for_select(@vehicle_devices, "id", "unique_id") %>
   </div>
   <div class="actions">
     <%= f.submit %>

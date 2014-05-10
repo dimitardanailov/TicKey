@@ -1,5 +1,6 @@
 class LineDevicesController < ApplicationController
   before_action :set_line_device, only: [:show, :edit, :update, :destroy]
+  before_action :selectbox_collection_items, only: [:new, :edit, :create, :update]
 
   # GET /line_devices
   # GET /line_devices.json
@@ -70,5 +71,11 @@ class LineDevicesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_device_params
       params.require(:line_device).permit(:line_id, :vehicle_device_id)
+    end
+
+    # Get Select box collection items
+    def selectbox_collection_items
+      @vehicle_devices = VehicleDevice.all
+      @lines = Line.all
     end
 end

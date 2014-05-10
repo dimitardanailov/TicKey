@@ -1313,3 +1313,1646 @@ Processing by LineDevicesController#new as HTML
   Rendered line_devices/_form.html.erb (7.8ms)
   Rendered line_devices/new.html.erb within layouts/application (10.1ms)
 Completed 200 OK in 33ms (Views: 20.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-10 09:44:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (62.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (20.2ms)
+Completed 200 OK in 99ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lines" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+Processing by LinesController#index as HTML
+  [1m[35mLine Load (87.0ms)[0m  SELECT `lines`.* FROM `lines`
+  Rendered lines/index.html.erb within layouts/application (104.0ms)
+Completed 200 OK in 523ms (Views: 415.8ms | ActiveRecord: 89.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:16 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:17 +0300
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[36mLineDevice Load (23.0ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices`[0m
+  Rendered line_devices/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 59ms (Views: 15.9ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:44:27 +0300
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:44:31 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines`
+  Rendered line_devices/_form.html.erb (145.6ms)
+  Rendered line_devices/new.html.erb within layouts/application (173.1ms)
+Completed 200 OK in 226ms (Views: 204.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines`[0m
+  [1m[35mVehicleDevice Load (24.5ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices`
+  Rendered line_devices/_form.html.erb (38.6ms)
+  Rendered line_devices/new.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 51ms (Views: 22.5ms | ActiveRecord: 27.3ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:33 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:34 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:34 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:34 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:34 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:34 +0300
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines`[0m
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices`
+  Rendered line_devices/_form.html.erb (6.3ms)
+  Rendered line_devices/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:47 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:48 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:48 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:48 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:48 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:48 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:48 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:45:48 +0300
+
+
+Started POST "/line_devices" for 127.0.0.1 at 2014-05-10 09:45:50 +0300
+Processing by LineDevicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7444DuRnNie4jSXmIZE5f6NM2PqAtmLVi/0Y8snoug=", "line_id"=>"1", "vehicle_device_id"=>"1", "commit"=>"Create Line device"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param not found: line_device):
+  app/controllers/line_devices_controller.rb:74:in `line_device_params'
+  app/controllers/line_devices_controller.rb:29:in `create'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.8ms)
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:46:13 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines`[0m
+  [1m[35mVehicleDevice Load (0.5ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices`
+  Rendered line_devices/_form.html.erb (7.2ms)
+  Rendered line_devices/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:14 +0300
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[36mLine Load (1.4ms)[0m  [1mSELECT `lines`.* FROM `lines`[0m
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices`
+  Rendered line_devices/_form.html.erb (8.0ms)
+  Rendered line_devices/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:54 +0300
+
+
+Started POST "/line_devices" for 127.0.0.1 at 2014-05-10 09:46:55 +0300
+Processing by LineDevicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7444DuRnNie4jSXmIZE5f6NM2PqAtmLVi/0Y8snoug=", "line_device"=>{"line_id"=>"1", "vehicle_device_id"=>"1"}, "commit"=>"Create Line device"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (56.9ms)[0m  INSERT INTO `line_devices` (`created_at`, `line_id`, `updated_at`, `vehicle_device_id`) VALUES ('2014-05-10 06:46:55', 1, '2014-05-10 06:46:55', 1)
+  [1m[36m (14.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/line_devices/1
+Completed 302 Found in 120ms (ActiveRecord: 72.0ms)
+
+
+Started GET "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLineDevice Load (23.0ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1
+  Rendered line_devices/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 32.2ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:46:56 +0300
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:46:58 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices`[0m
+  Rendered line_devices/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/line_devices/1/edit" for 127.0.0.1 at 2014-05-10 09:46:59 +0300
+Processing by LineDevicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1
+  Rendered line_devices/_form.html.erb (4.0ms)
+  Rendered line_devices/edit.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :line_id %><br>
+    16:     <%= select_tag "line_device[line_id]", options_from_collection_for_select(@lines, "id", "name") %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :vehicle_device_id %><br>
+  app/views/line_devices/_form.html.erb:16:in `block in _app_views_line_devices__form_html_erb___1890758636377147253_2159607580'
+  app/views/line_devices/_form.html.erb:1:in `_app_views_line_devices__form_html_erb___1890758636377147253_2159607580'
+  app/views/line_devices/edit.html.erb:3:in `_app_views_line_devices_edit_html_erb__2079562896196911614_2159669380'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.2ms)
+
+
+Started GET "/line_devices/1/edit" for 127.0.0.1 at 2014-05-10 09:46:59 +0300
+Processing by LineDevicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLineDevice Load (0.5ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1[0m
+  Rendered line_devices/_form.html.erb (1.9ms)
+  Rendered line_devices/edit.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :line_id %><br>
+    16:     <%= select_tag "line_device[line_id]", options_from_collection_for_select(@lines, "id", "name") %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :vehicle_device_id %><br>
+  app/views/line_devices/_form.html.erb:16:in `block in _app_views_line_devices__form_html_erb___1890758636377147253_2164207600'
+  app/views/line_devices/_form.html.erb:1:in `_app_views_line_devices__form_html_erb___1890758636377147253_2164207600'
+  app/views/line_devices/edit.html.erb:3:in `_app_views_line_devices_edit_html_erb__2079562896196911614_2157340360'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.1ms)
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:47:20 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices`
+  Rendered line_devices/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:21 +0300
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:47:22 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[36mLine Load (0.3ms)[0m  [1mSELECT `lines`.* FROM `lines`[0m
+  [1m[35mVehicleDevice Load (0.3ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices`
+  Rendered line_devices/_form.html.erb (4.1ms)
+  Rendered line_devices/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:47:23 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[36mLine Load (0.3ms)[0m  [1mSELECT `lines`.* FROM `lines`[0m
+  [1m[35mVehicleDevice Load (0.3ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices`
+  Rendered line_devices/_form.html.erb (4.1ms)
+  Rendered line_devices/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:47:24 +0300
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:47:27 +0300
+Processing by LineDevicesController#new as HTML
+  Rendered line_devices/_form.html.erb (7.2ms)
+  Rendered line_devices/new.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :line_id %><br>
+    16:     <%= select_tag "line_device[line_id]", options_from_collection_for_select(@lines, "id", "name") %>
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :vehicle_device_id %><br>
+  app/views/line_devices/_form.html.erb:16:in `block in _app_views_line_devices__form_html_erb___1890758636377147253_2164207600'
+  app/views/line_devices/_form.html.erb:1:in `_app_views_line_devices__form_html_erb___1890758636377147253_2164207600'
+  app/views/line_devices/new.html.erb:3:in `_app_views_line_devices_new_html_erb___4433817391639895705_2158917360'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines`[0m
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices`
+  Rendered line_devices/_form.html.erb (27.2ms)
+  Rendered line_devices/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 49ms (Views: 30.0ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:44 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:45 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:45 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:45 +0300
+
+
+Started POST "/line_devices" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+Processing by LineDevicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7444DuRnNie4jSXmIZE5f6NM2PqAtmLVi/0Y8snoug=", "line_device"=>{"line_id"=>"1", "vehicle_device_id"=>"1"}, "commit"=>"Create Line device"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `line_devices` (`created_at`, `line_id`, `updated_at`, `vehicle_device_id`) VALUES ('2014-05-10 06:48:47', 1, '2014-05-10 06:48:47', 1)
+  [1m[36m (13.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/line_devices/2
+Completed 302 Found in 20ms (ActiveRecord: 14.2ms)
+
+
+Started GET "/line_devices/2" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mLineDevice Load (6.0ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 2 LIMIT 1
+  Rendered line_devices/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:47 +0300
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:48:48 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[36mLineDevice Load (0.6ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices`[0m
+  Rendered line_devices/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/line_devices/2" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+Processing by LineDevicesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v7444DuRnNie4jSXmIZE5f6NM2PqAtmLVi/0Y8snoug=", "id"=>"2"}
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (10.4ms)[0m  DELETE FROM `line_devices` WHERE `line_devices`.`id` = 2
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/line_devices
+Completed 302 Found in 15ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[35mLineDevice Load (0.8ms)[0m  SELECT `line_devices`.* FROM `line_devices`
+  Rendered line_devices/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:52 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:53 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:53 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:53 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:53 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:53 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:48:53 +0300
+
+
+Started GET "/line_devices/1/edit" for 127.0.0.1 at 2014-05-10 09:48:59 +0300
+Processing by LineDevicesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLineDevice Load (0.4ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines`
+  [1m[36mVehicleDevice Load (0.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices`[0m
+  Rendered line_devices/_form.html.erb (18.1ms)
+  Rendered line_devices/edit.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+Processing by LineDevicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7444DuRnNie4jSXmIZE5f6NM2PqAtmLVi/0Y8snoug=", "line_device"=>{"line_id"=>"1", "vehicle_device_id"=>"1"}, "commit"=>"Update Line device", "id"=>"1"}
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/line_devices/1
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLineDevice Load (0.6ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1[0m
+  Rendered line_devices/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:49:01 +0300
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:49:02 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[35mLineDevice Load (1.4ms)[0m  SELECT `line_devices`.* FROM `line_devices`
+  Rendered line_devices/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[36mLineDevice Load (0.4ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices`[0m
+  Rendered line_devices/index.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 98ms (Views: 24.4ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:17 +0300
+
+
+Started GET "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:53:18 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1
+  Rendered line_devices/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:53:46 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLineDevice Load (0.4ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  Rendered line_devices/show.html.erb within layouts/application (93.1ms)
+Completed 200 OK in 105ms (Views: 70.4ms | ActiveRecord: 33.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:46 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:46 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:46 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:46 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:46 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:46 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:46 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:53:47 +0300
+
+
+Started GET "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:54:00 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLineDevice Load (0.6ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mVehicleDevice Load (0.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  Rendered line_devices/show.html.erb within layouts/application (23.2ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `name' for #<VehicleDevice:0x0000010178f198>):
+     8: <p>
+     9:   <strong>Vehicle device:</strong>
+    10:   <%= @line_device.vehicle_device_id %>
+    11:   <%= @line_device.vehicle_device.name %>
+    12: </p>
+    13: 
+    14: <%= link_to 'Edit', edit_line_device_path(@line_device) %> |
+  app/views/line_devices/show.html.erb:11:in `_app_views_line_devices_show_html_erb___1603006466822575103_2176844900'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:54:08 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  Rendered line_devices/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:09 +0300
+
+
+Started GET "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLineDevice Load (0.4ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mVehicleDevice Load (0.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  Rendered line_devices/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:47 +0300
+
+
+Started GET "/line_devices/1" for 127.0.0.1 at 2014-05-10 09:54:48 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 1 LIMIT 1
+  [1m[36mLine Load (0.3ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mVehicleDevice Load (0.9ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  Rendered line_devices/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:48 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:48 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:48 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:48 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:48 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:48 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:49 +0300
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:54:50 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[36mLineDevice Load (0.6ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices`[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mVehicleDevice Load (0.3ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  Rendered line_devices/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `name' for #<VehicleDevice:0x00000101fd9290>):
+    15:     <% @line_devices.each do |line_device| %>
+    16:       <tr>
+    17:         <td><%= line_device.line.name %></td>
+    18:         <td><%= line_device.vehicle_device.name %></td>
+    19:         <td><%= link_to 'Show', line_device %></td>
+    20:         <td><%= link_to 'Edit', edit_line_device_path(line_device) %></td>
+    21:         <td><%= link_to 'Destroy', line_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/line_devices/index.html.erb:18:in `block in _app_views_line_devices_index_html_erb___959733847211298926_2164216920'
+  app/views/line_devices/index.html.erb:15:in `_app_views_line_devices_index_html_erb___959733847211298926_2164216920'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:54:50 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices`
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mVehicleDevice Load (0.6ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  Rendered line_devices/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `name' for #<VehicleDevice:0x00000103923908>):
+    15:     <% @line_devices.each do |line_device| %>
+    16:       <tr>
+    17:         <td><%= line_device.line.name %></td>
+    18:         <td><%= line_device.vehicle_device.name %></td>
+    19:         <td><%= link_to 'Show', line_device %></td>
+    20:         <td><%= link_to 'Edit', edit_line_device_path(line_device) %></td>
+    21:         <td><%= link_to 'Destroy', line_device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/line_devices/index.html.erb:18:in `block in _app_views_line_devices_index_html_erb___959733847211298926_2177538920'
+  app/views/line_devices/index.html.erb:15:in `_app_views_line_devices_index_html_erb___959733847211298926_2177538920'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[36mLineDevice Load (0.3ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices`[0m
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mVehicleDevice Load (0.3ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  Rendered line_devices/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:54:57 +0300
+
+
+Started GET "/line_devices/new" for 127.0.0.1 at 2014-05-10 09:55:01 +0300
+Processing by LineDevicesController#new as HTML
+  [1m[35mLine Load (0.8ms)[0m  SELECT `lines`.* FROM `lines`
+  [1m[36mVehicleDevice Load (1.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices`[0m
+  Rendered line_devices/_form.html.erb (7.4ms)
+  Rendered line_devices/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/line_devices" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+Processing by LineDevicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v7444DuRnNie4jSXmIZE5f6NM2PqAtmLVi/0Y8snoug=", "line_device"=>{"line_id"=>"1", "vehicle_device_id"=>"1"}, "commit"=>"Create Line device"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `line_devices` (`created_at`, `line_id`, `updated_at`, `vehicle_device_id`) VALUES ('2014-05-10 06:55:03', 1, '2014-05-10 06:55:03', 1)[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/line_devices/3
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/line_devices/3" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+Processing by LineDevicesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mLineDevice Load (0.5ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`id` = 3 LIMIT 1[0m
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mVehicleDevice Load (0.3ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  Rendered line_devices/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-10 09:55:03 +0300
+
+
+Started GET "/line_devices" for 127.0.0.1 at 2014-05-10 09:55:05 +0300
+Processing by LineDevicesController#index as HTML
+  [1m[35mLineDevice Load (0.4ms)[0m  SELECT `line_devices`.* FROM `line_devices`
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mVehicleDevice Load (0.6ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 1 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` = 1 ORDER BY `vehicle_devices`.`id` ASC LIMIT 1  [["id", 1]]
+  Rendered line_devices/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 1.5ms)
