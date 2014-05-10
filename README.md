@@ -39,6 +39,9 @@ http://tickey.herokuapp.com/card_purches/user_active_cards/:user_id/:uuid.json
 - params[:user_id]
 - params[:uuid]
 
+http://tickey.herokuapp.com/vehicle_devices/get_vehicle_users/:uuid.json
+- params[:user_id]
+
 JSON Examples Post: 
 ==========
 
