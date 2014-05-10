@@ -50,3 +50,9 @@ http://tickey.herokuapp.com/users/register_user.json
 - params[:last_name]
 - params[:pin]
 
+http://tickey.herokuapp.com/card_purches/make_order.json
+
+- params[:user_id]
+- params[:line_name]
+- params[:card_type]
+
