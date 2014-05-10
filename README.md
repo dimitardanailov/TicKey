@@ -24,7 +24,13 @@ http://tickey.herokuapp.com/vehicle_devices
 
 JSON Examples:
 
+Get
+==========
+
 http://tickey.herokuapp.com/transport_card_types.json
+
+Post
+==========
 
 http://tickey.herokuapp.com/users/authenticate.json
 - params[:email]
