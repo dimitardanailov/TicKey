@@ -71,8 +71,6 @@ class CardPurchesController < ApplicationController
     params_are_valid = check_params_keys_exist_into_request(param_keys, params)
     success = false
 
-    puts YAML::dump params
-
     if params_are_valid
       begin
        card_purches = CardPurch.new 
@@ -106,6 +104,32 @@ class CardPurchesController < ApplicationController
 
     respond_to do |format|
       format.json { render :json => json_data , :status => 200 }
+    end
+  end
+
+  def get_active_tickets_by_uuid_and_user
+    param_keys = ["user_id", "uuid"]
+    params_are_valid = check_params_keys_exist_into_request(param_keys, params)
+    card_purches = Array.new
+
+    if params_are_valid
+      user_id = params[:user_id]
+      db_card_purches = CardPurch.get_active_card_purches_by_user_id(user_id)
+      
+      db_card_purches.each do |db_card|
+        line = db_card.line
+        ticket_info = Hash.new
+        expirte_date = db_card[:expire_date].to_formatted_s(:response_format)
+        ticket_info[:expire_date] = expirte_date
+        ticket_info[:line_name] = line[:name]
+
+        card_purches.push(ticket_info)
+      end
+    end
+
+    puts YAML::dump card_purches
+    respond_to do |format|
+      format.json { render :json => card_purches , :status => 200 }
     end
   end
 

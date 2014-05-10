@@ -1,5 +1,5 @@
 class Line < ActiveRecord::Base
-  validates_presence_of :name
-
   has_many :line_devices
+
+  validates_presence_of :name
 end
