@@ -7,6 +7,10 @@ TicKey::Application.routes.draw do
     post "/register_user" => "users#register_user",
       as: :user_register
   end
+  
+  scope "/vehicle_devices" do
+    get 'line_name_by_uuid/:uuid' => 'vehicle_devices#get_line_name_by_uuid'
+  end
 
   resources :card_purches
 

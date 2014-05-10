@@ -61,6 +61,31 @@ class VehicleDevicesController < ApplicationController
     end
   end
 
+  def get_line_name_by_uuid
+    param_keys = ["uuid"]
+    params_are_valid = check_params_keys_exist_into_request(param_keys, params)
+    line_name = nil
+
+    if params_are_valid
+      device = VehicleDevice.where(:unique_id => params[:uuid]).first
+
+      unless device.blank?
+        line_devices = device.line_devices
+
+        line_devices.each do |line_device|
+          line_name = line_device.line.name
+        end
+      end
+    end
+
+    line = Hash.new
+    line[:name] = line_name
+
+    respond_to do |format|
+      format.json { render :json => line , :status => 200 }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_vehicle_device
