@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Line:</strong>
+  <%= @line_device.line.name %>
+</p>
+
+<p>
+  <strong>Vehicle device:</strong>
+  <%= @line_device.vehicle_device_id %>
+  <%= @line_device.vehicle_device.unique_id %>
+</p>
+
+<%= link_to 'Edit', edit_line_device_path(@line_device) %> |
+<%= link_to 'Back', line_devices_path %>
