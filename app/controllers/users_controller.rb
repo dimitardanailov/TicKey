@@ -78,7 +78,7 @@ class UsersController < ApplicationController
 
     if params_are_valid
       user = User
-        .select(:id)
+        .select("id, first_name, last_name")
         .where("email = ? AND password = ?", params[:email], params[:password])
         .first
 
