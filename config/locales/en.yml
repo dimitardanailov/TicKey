@@ -20,4 +20,61 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  id: "Id"
+  name: "Name"
+  show: "Show"
+  edit: "Edit"
+  delete: "Delete"
+  back: "Back"
+
+  confirm:
+    are_you_sure: "Are you sure"
+
+  # Plugin -> https://github.com/amatsuda/kaminari
+  views:
+    short_name: "Short name"
+    pagination: 
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+    helpers:
+      page_entries_info:
+        one_page:
+          display_entries:
+            zero: "No %{entry_name} found"
+            one: "Displaying <span>1</span> %{entry_name}"
+            other: "Displaying <span>all %{count}</span> %{entry_name}"
+        more_pages:
+          display_entries: "Displaying %{entry_name} <span>%{first}&nbsp;-&nbsp;%{last}</span> of <b>%{total}</b> in total"
+
+# Sections 
+# Sections 
+
+# Admin Area
+# Admin Area
+
+# Database errors
+  database_errors:
+    database_record_doesnt_exist: "Into our database %{record_name} doesn't exist"
+# Database errors
+
+# Types
+  invalid_types:
+    array: "Your variable %{variable_name} is not a valid Array"
+# Types
+
+# Json Errors
+  json_errors:
+    invalid_request_params: "Invalid request params"
+    invalid_mobile_key: "Invalid mobile key"
+    member_is_inactive: "Member is inactive"
+    record_cant_be_created: "Database record can't be create or update"
+    user_doesnt_exist_into_our_database: "Member doesn’t exitst"
+    user_is_inactive: "Member is inactive"
+    user_exist_into_db: "Email address exist into our database"
+    email_is_not_register_into_your_system: "Your email address is not defined into our database"
+    email_is_invalid: "Sorry, but this email is invalid"
+    user_cant_be_saved: "User can't be saved into our database"
+# Json Errors

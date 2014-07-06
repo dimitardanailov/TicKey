@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   include UsersHelper
+  include ApplicationHelper
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # http://stackoverflow.com/questions/16258911/rails-4-authenticity-token
@@ -65,16 +66,19 @@ class UsersController < ApplicationController
     end
   end
 
-  # User login by mobile call
+  # User login by user call
   def authenticate
     # load_testing_login_details
 
+    # Trim user params
+    params.trim_params
+
+    # Correct user request must to have:
     param_keys = ["email", "password"]
     params_are_valid = check_params_keys_exist_into_request(param_keys, params)
-    user_id = nil
-    do_exist = false
-    first_name = nil
-    last_name = nil
+
+    user = nil
+    json_error = nil
 
     if params_are_valid
       user = User
@@ -82,36 +86,41 @@ class UsersController < ApplicationController
         .where("email = ? AND password = ?", params[:email], params[:password])
         .first
 
-      unless user.blank?
-        user_id = user.id
-        do_exist = true
-        first_name = user.first_name
-        last_name = user.last_name
+      if user.blank?
+        json_error = generate_json_error_object(403, "json_errors.user_doesnt_exist_into_our_database");
       end
+    else
+      json_error = generate_invalid_request_params
     end
 
-    authenticate_information = Hash.new
-    authenticate_information[:user_id] = user_id
-    authenticate_information[:do_exist] = do_exist
-    authenticate_information[:first_name] = first_name
-    authenticate_information[:last_name] = last_name
-
-    respond_to do |format|
-      format.json { render :json => authenticate_information , :status => 200 }
-    end
+    response_information_for_api_calls(user, json_error)
   end
 
-  # User register by mobile call
+  # User register by user call
   def register_user
     #load_testing_register_details
+    
+    # Trim user params
+    params.trim_params
 
     param_keys = ["email", "password", "first_name", "last_name", "pin"]
     params_are_valid = check_params_keys_exist_into_request(param_keys, params)
-    user_id = nil
 
-    begin
-      if params_are_valid
+    json_error = nil
 
+    if params_are_valid
+      user_exist_into_db = User.check_user_exist_by_email(params[:email])
+
+      if user_exist_into_db
+        json_error = generate_json_error_object(402, "json_errors.user_exist_into_db")
+      end
+    else
+      json_error = generate_invalid_request_params
+    end
+
+    if json_error.blank?
+      # Try to save record into a database
+      begin
         user = User.new
         param_keys.each do |key|
           user[key] = params[key]
@@ -119,18 +128,20 @@ class UsersController < ApplicationController
 
         if user.valid?
           user.save
-          user_id = user.id
+          clear_user = user.clear_unsed_attributes(user)
+
+          response_information_for_api_success_call(clear_user)
+        else
+          response_record_cant_be_updated_or_created
         end
+      rescue => ex
+        puts YAML::dump ex
+        response_record_cant_be_updated_or_created
       end
-    rescue => ex
-      puts YAML::dump ex
-    end
-
-    authenticate_information = Hash.new
-    authenticate_information[:user_id] = user_id
-
-    respond_to do |format|
-      format.json { render :json => authenticate_information , :status => 200 }
+    else
+      respond_to do |format|
+        response_json_error(format, json_error)
+      end
     end
   end
 
@@ -147,5 +158,39 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:email, :first_name, :last_name, :pin, :password, :picture)
+    end
+
+    # If you json error is blank will response success api call, otherwise will
+    # response with error information
+    def response_information_for_api_calls(user, json_error)
+      if json_error.nil?
+        response_information_for_api_success_call(user)
+      else
+        respond_to do |format|
+          response_json_error(format, json_error)
+        end
+      end
+    end
+
+    # Generate json_succes collection. Collection contains HTTP Code information
+    # and user information
+    def response_information_for_api_success_call(user)
+      json_succes = {
+        HTTP_CODE: 200,
+        user: user
+      }
+
+      respond_to do |format|
+        format.json { render :json => json_succes , :status => 200 }
+      end
+    end
+
+    # Response information when user can be added into database or can't be 
+    # updated
+    def response_record_cant_be_updated_or_created
+      respond_to do |format|
+        json_error = generate_database_record_cant_be_created_or_updated
+        response_json_error(format, json_error)
+      end
     end
 end
