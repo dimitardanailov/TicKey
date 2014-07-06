@@ -77,4 +77,5 @@ en:
     email_is_not_register_into_your_system: "Your email address is not defined into our database"
     email_is_invalid: "Sorry, but this email is invalid"
     user_cant_be_saved: "User can't be saved into our database"
+    uuid_invalid_database_info: Sorry, but for this uuid we not any information
 # Json Errors

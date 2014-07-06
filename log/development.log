@@ -6446,3 +6446,114 @@ Can't verify CSRF token authenticity
   [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `first_name`, `last_name`, `password`, `pin`, `updated_at`) VALUES ('2014-07-05 19:58:42', 'd.danailov@158ltd.co', 'Dimitar', 'Danailov', 'test', '881222', '2014-07-05 19:58:42')[0m
   [1m[35m (2.4ms)[0m  COMMIT
 Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/en/transport_card_types.json" for 127.0.0.1 at 2014-07-06 10:28:24 +0300
+
+ActionController::RoutingError (No route matches [GET] "/en/transport_card_types.json"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/macosx/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/macosx/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/macosx/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (74.4ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (46.2ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (245.8ms)
+
+
+Started GET "/en/cms/transport_card_types.json" for 127.0.0.1 at 2014-07-06 10:28:31 +0300
+Processing by TransportCardTypesController#index as JSON
+  Parameters: {"locale"=>"en"}
+  [1m[36mTransportCardType Load (164.6ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types`[0m
+  Rendered transport_card_types/index.json.jbuilder (314.1ms)
+Completed 500 Internal Server Error in 412ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"transport_card_types", :locale=>#<TransportCardType id: 1, name: "Test", created_at: "2014-05-09 20:48:55", updated_at: "2014-05-09 20:48:55">, :format=>:json, :id=>nil} missing required keys: [:id]):
+    1: json.array!(@transport_card_types) do |transport_card_type|
+    2:   json.extract! transport_card_type, :id, :name
+    3:   json.url transport_card_type_url(transport_card_type, format: :json)
+    4: end
+  app/views/transport_card_types/index.json.jbuilder:3:in `block in _app_views_transport_card_types_index_json_jbuilder___210479622728812093_2195745220'
+  app/views/transport_card_types/index.json.jbuilder:1:in `_app_views_transport_card_types_index_json_jbuilder___210479622728812093_2195745220'
+
+
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+  Rendered /Users/macosx/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (28.7ms)
+
+
+Started GET "/en/vehicle_devices/line_name_by_uuid/1.json" for 127.0.0.1 at 2014-07-06 10:36:12 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1"}
+  [1m[35mVehicleDevice Load (0.6ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 403 Forbidden in 219ms (Views: 0.5ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/en/vehicle_devices/line_name_by_uuid/1.json" for 127.0.0.1 at 2014-07-06 10:36:15 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1"}
+  [1m[36mVehicleDevice Load (0.6ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+Completed 403 Forbidden in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/en/vehicle_devices/line_name_by_uuid/1.json" for 127.0.0.1 at 2014-07-06 10:38:54 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1"}
+  [1m[35mVehicleDevice Load (0.7ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 403 Forbidden in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en/vehicle_devices/line_name_by_uuid/1.json" for 127.0.0.1 at 2014-07-06 10:38:56 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1"}
+  [1m[36mVehicleDevice Load (37.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+Completed 403 Forbidden in 40ms (Views: 0.3ms | ActiveRecord: 37.4ms)
+
+
+Started GET "/en/vehicle_devices/line_name_by_uuid/1.json" for 127.0.0.1 at 2014-07-06 10:53:18 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1"}
+  [1m[35mVehicleDevice Load (0.6ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 403 Forbidden in 8ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/en/vehicle_devices/line_name_by_uuid/1.json" for 127.0.0.1 at 2014-07-06 10:54:30 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1"}
+  [1m[36mVehicleDevice Load (0.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 137ms (Views: 0.4ms | ActiveRecord: 103.5ms)
+
+
+Started GET "/en/vehicle_devices/line_name_by_uuid/1.json" for 127.0.0.1 at 2014-07-06 10:54:37 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1"}
+  [1m[35mVehicleDevice Load (0.4ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 403 Forbidden in 33ms (Views: 0.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/en/vehicle_devices/line_name_by_uuid/1.json" for 127.0.0.1 at 2014-07-06 10:54:42 +0300
+Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1"}
+  [1m[36mVehicleDevice Load (1.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+Completed 403 Forbidden in 5ms (Views: 0.6ms | ActiveRecord: 1.4ms)

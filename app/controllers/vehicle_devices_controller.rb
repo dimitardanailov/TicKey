@@ -66,7 +66,9 @@ class VehicleDevicesController < ApplicationController
   def get_line_name_by_uuid
     param_keys = ["uuid"]
     params_are_valid = check_params_keys_exist_into_request(param_keys, params)
+
     line_name = nil
+    json_error = nil
 
     if params_are_valid
       device = VehicleDevice.where(:unique_id => params[:uuid]).first
@@ -74,14 +76,25 @@ class VehicleDevicesController < ApplicationController
 
       unless line.blank?
         line_name = line[:name]
+      else
+        json_error = generate_json_error_object(403, "json_errors.uuid_invalid_database_info")
       end
+    else
+      json_error = generate_invalid_request_params
     end
 
-    line = Hash.new
-    line[:name] = line_name
+    if json_error.blank?
+      line = Hash.new
+      line[:HTTP_CODE] = 200
+      line[:name] = line_name
 
-    respond_to do |format|
-      format.json { render :json => line , :status => 200 }
+      respond_to do |format|
+        format.json { render :json => line , :status => 200 }
+      end
+    else
+      respond_to do |format|
+        response_json_error(format, json_error)
+      end
     end
   end
 
