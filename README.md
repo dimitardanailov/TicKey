@@ -1,33 +1,38 @@
-Domain: 
+Domain:
 ==========
 
 http://tickey.herokuapp.com/
+
+Admin Panel
+==========
+
+http://tickey.herokuapp.com/admin
 
 CMS:
 ==========
 
 Users:
 
-http://tickey.herokuapp.com/users
+http://tickey.herokuapp.com/cms/users
 
 Lines:
 
-http://tickey.herokuapp.com/lines
+http://tickey.herokuapp.com/cms/lines
 
 Line Devies:
 
-http://tickey.herokuapp.com/line_devices
+http://tickey.herokuapp.com/cms/line_devices
 
 Transport Card Types:
 
-http://tickey.herokuapp.com/transport_card_types
+http://tickey.herokuapp.com/cms/transport_card_types
 
 Vehicle Devices
 
-http://tickey.herokuapp.com/vehicle_devices
+http://tickey.herokuapp.com/cms/vehicle_devices
 
 
-JSON Examples Get: 
+JSON Examples Get:
 ==========
 
 http://tickey.herokuapp.com/transport_card_types.json
@@ -42,7 +47,7 @@ http://tickey.herokuapp.com/card_purches/user_active_cards/:user_id/:uuid.json
 http://tickey.herokuapp.com/vehicle_devices/get_vehicle_users/:uuid.json
 - params[:user_id]
 
-JSON Examples Post: 
+JSON Examples Post:
 ==========
 
 http://tickey.herokuapp.com/users/authenticate.json

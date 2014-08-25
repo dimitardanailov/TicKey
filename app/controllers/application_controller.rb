@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     I18n.locale = params[:locale] || I18n.default_locale
   end
 
-  # set locale to I18n.locale when automatically generating url
+  # set locale to I18n.locale when automatically generating urls
   def default_url_options(options = {})
     { locale: I18n.locale }
   end
