@@ -6557,3 +6557,400 @@ Processing by VehicleDevicesController#get_line_name_by_uuid as JSON
   Parameters: {"locale"=>"en", "uuid"=>"1"}
   [1m[36mVehicleDevice Load (1.4ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
 Completed 403 Forbidden in 5ms (Views: 0.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-25 12:05:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 49ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/en/users" for 127.0.0.1 at 2014-08-25 12:05:51 +0300
+
+ActionController::RoutingError (No route matches [GET] "/en/users"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/plamena/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/plamena/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/plamena/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.3ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.7ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (77.1ms)
+
+
+Started GET "/en/cms/lines" for 127.0.0.1 at 2014-08-25 12:06:02 +0300
+Processing by LinesController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mLine Load (0.4ms)[0m  SELECT `lines`.* FROM `lines`
+  Rendered lines/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1065ms (Views: 1055.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/transport_card_types.css?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/lines.css?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/line_devices.css?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/card_purches.css?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/vehicle_devices.css?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/card_purches.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/line_devices.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/lines.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/transport_card_types.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/vehicle_devices.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-25 12:06:04 +0300
+  [1m[36m (676.1ms)[0m  [1mDROP DATABASE IF EXISTS `TicKey`[0m
+  [1m[35m (0.4ms)[0m  CREATE DATABASE `TicKey` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE `TicKey_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+Mysql2::Error: Can't create database 'TicKey_test'; database exists: CREATE DATABASE `TicKey_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[35m (150.3ms)[0m  CREATE TABLE `card_purches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `transport_card_type_id` int(11) NOT NULL, `line_id` int(11) NOT NULL, `expire_date` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (281.3ms)[0m  [1mCREATE INDEX `card_purches_line_id_fk` USING btree ON `card_purches` (`line_id`) [0m
+  [1m[35m (258.2ms)[0m  CREATE INDEX `card_purches_transport_card_type_id_fk` USING btree ON `card_purches` (`transport_card_type_id`) 
+  [1m[36m (725.6ms)[0m  [1mCREATE INDEX `card_purches_user_id_fk` USING btree ON `card_purches` (`user_id`) [0m
+  [1m[35m (145.2ms)[0m  CREATE TABLE `line_devices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `line_id` int(11) NOT NULL, `vehicle_device_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (89.3ms)[0m  [1mCREATE TABLE `lines` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `price` decimal(8,2), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (148.9ms)[0m  CREATE TABLE `transport_card_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (152.8ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_type_id` int(11) DEFAULT 1 NOT NULL, `email` varchar(120) NOT NULL, `first_name` varchar(120) NOT NULL, `last_name` varchar(120) NOT NULL, `pin` varchar(12) NOT NULL, `password` varchar(255) NOT NULL, `picture` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (145.9ms)[0m  CREATE TABLE `vehicle_devices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `unique_id` varchar(255) NOT NULL, `major` int(11), `minor` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (761.9ms)[0m  [1mALTER TABLE `card_purches` ADD CONSTRAINT `card_purches_line_id_fk` FOREIGN KEY (`line_id`) REFERENCES `lines`(id) ON DELETE CASCADE[0m
+  [1m[35m (372.3ms)[0m  ALTER TABLE `card_purches` ADD CONSTRAINT `card_purches_transport_card_type_id_fk` FOREIGN KEY (`transport_card_type_id`) REFERENCES `transport_card_types`(id) ON DELETE CASCADE
+  [1m[36m (337.8ms)[0m  [1mALTER TABLE `card_purches` ADD CONSTRAINT `card_purches_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `users`(id) ON DELETE CASCADE[0m
+  [1m[35m (143.2ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (303.9ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (67.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140509204518')[0m
+  [1m[35m (78.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140509202604')
+  [1m[36m (78.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140509203647')[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140509194752')
+  [1m[36m (55.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140509194939')[0m
+  [1m[35m (78.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140509202939')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT DATABASE()[0m
+  [1m[35m (0.4ms)[0m  SELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'card_purches'
+
+  [1m[36m (0.9ms)[0m  [1mSELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'card_purches' 
+[0m
+  [1m[35m (0.4ms)[0m  SELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'line_devices'
+
+  [1m[36m (0.8ms)[0m  [1mSELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'line_devices' 
+[0m
+  [1m[35m (0.4ms)[0m  SELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'lines'
+
+  [1m[36m (0.8ms)[0m  [1mSELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'lines' 
+[0m
+  [1m[35m (0.4ms)[0m  SELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'transport_card_types'
+
+  [1m[36m (0.9ms)[0m  [1mSELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'transport_card_types' 
+[0m
+  [1m[35m (0.4ms)[0m  SELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'users'
+
+  [1m[36m (1.0ms)[0m  [1mSELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'users' 
+[0m
+  [1m[35m (0.4ms)[0m  SELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'vehicle_devices'
+
+  [1m[36m (0.9ms)[0m  [1mSELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'vehicle_devices' 
+[0m
+  [1m[35m (0.4ms)[0m  
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'card_purches'
+ 
+  [1m[36m (0.3ms)[0m  [1mSHOW CREATE TABLE `card_purches`[0m
+  [1m[35m (0.6ms)[0m  
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'line_devices'
+ 
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `line_devices`[0m
+  [1m[35m (0.4ms)[0m  
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'lines'
+ 
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `lines`[0m
+  [1m[35m (0.4ms)[0m  
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'transport_card_types'
+ 
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `transport_card_types`[0m
+  [1m[35m (0.4ms)[0m  
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'users'
+ 
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.4ms)[0m  
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'vehicle_devices'
+ 
+  [1m[36m (0.2ms)[0m  [1mSHOW CREATE TABLE `vehicle_devices`[0m
+  [1m[36m (549.1ms)[0m  [1mDROP DATABASE IF EXISTS `TicKey`[0m
+  [1m[35m (0.7ms)[0m  CREATE DATABASE `TicKey` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (0.9ms)[0m  [1mCREATE DATABASE `TicKey_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+Mysql2::Error: Can't create database 'TicKey_test'; database exists: CREATE DATABASE `TicKey_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[35m (131.8ms)[0m  CREATE TABLE `card_purches` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11) NOT NULL, `transport_card_type_id` int(11) NOT NULL, `line_id` int(11) NOT NULL, `expire_date` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (223.0ms)[0m  [1mCREATE INDEX `card_purches_line_id_fk` USING btree ON `card_purches` (`line_id`) [0m
+  [1m[35m (202.5ms)[0m  CREATE INDEX `card_purches_transport_card_type_id_fk` USING btree ON `card_purches` (`transport_card_type_id`) 
+  [1m[36m (193.4ms)[0m  [1mCREATE INDEX `card_purches_user_id_fk` USING btree ON `card_purches` (`user_id`) [0m
+  [1m[35m (122.1ms)[0m  CREATE TABLE `line_devices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `line_id` int(11) NOT NULL, `vehicle_device_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (89.5ms)[0m  [1mCREATE TABLE `lines` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `price` decimal(8,2), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (112.8ms)[0m  CREATE TABLE `transport_card_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (122.5ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_type_id` int(11) DEFAULT 1 NOT NULL, `email` varchar(120) NOT NULL, `first_name` varchar(120) NOT NULL, `last_name` varchar(120) NOT NULL, `pin` varchar(12) NOT NULL, `password` varchar(255) NOT NULL, `picture` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (100.5ms)[0m  CREATE TABLE `vehicle_devices` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `unique_id` varchar(255) NOT NULL, `major` int(11), `minor` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (360.1ms)[0m  [1mALTER TABLE `card_purches` ADD CONSTRAINT `card_purches_line_id_fk` FOREIGN KEY (`line_id`) REFERENCES `lines`(id) ON DELETE CASCADE[0m
+  [1m[35m (294.7ms)[0m  ALTER TABLE `card_purches` ADD CONSTRAINT `card_purches_transport_card_type_id_fk` FOREIGN KEY (`transport_card_type_id`) REFERENCES `transport_card_types`(id) ON DELETE CASCADE
+  [1m[36m (249.0ms)[0m  [1mALTER TABLE `card_purches` ADD CONSTRAINT `card_purches_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `users`(id) ON DELETE CASCADE[0m
+  [1m[35m (111.1ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36m (314.3ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) [0m
+  [1m[35m (0.7ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (76.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140509204518')[0m
+  [1m[35m (66.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140509202604')
+  [1m[36m (66.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140509203647')[0m
+  [1m[35m (66.9ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140509194752')
+  [1m[36m (78.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140509194939')[0m
+  [1m[35m (78.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140509202939')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddForeignKeysToLineDevices (20140825095641)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddForeignKeysToLineDevices (20140825095641)
+  [1m[35m (316.4ms)[0m  ALTER TABLE `line_devices` ADD CONSTRAINT `line_devices_line_id_fk` FOREIGN KEY (`line_id`) REFERENCES `lines`(id) ON DELETE CASCADE
+  [1m[36m (326.4ms)[0m  [1mALTER TABLE `line_devices` ADD CONSTRAINT `line_devices_vehicle_device_id_fk` FOREIGN KEY (`vehicle_device_id`) REFERENCES `vehicle_devices`(id) ON DELETE CASCADE[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (17.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20140825095641')[0m
+  [1m[35m (54.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT DATABASE()
+  [1m[36m (0.4ms)[0m  [1mSELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'card_purches'
+[0m
+  [1m[35m (0.9ms)[0m  SELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'card_purches' 
+
+  [1m[36m (0.4ms)[0m  [1mSELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'line_devices'
+[0m
+  [1m[35m (0.8ms)[0m  SELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'line_devices' 
+
+  [1m[36m (0.4ms)[0m  [1mSELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'lines'
+[0m
+  [1m[35m (0.8ms)[0m  SELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'lines' 
+
+  [1m[36m (0.4ms)[0m  [1mSELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'transport_card_types'
+[0m
+  [1m[35m (0.9ms)[0m  SELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'transport_card_types' 
+
+  [1m[36m (0.4ms)[0m  [1mSELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'users'
+[0m
+  [1m[35m (1.0ms)[0m  SELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'users' 
+
+  [1m[36m (0.4ms)[0m  [1mSELECT table_comment FROM INFORMATION_SCHEMA.TABLES
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'vehicle_devices'
+[0m
+  [1m[35m (0.9ms)[0m  SELECT column_name, column_comment FROM INFORMATION_SCHEMA.COLUMNS
+ WHERE table_schema = 'TicKey'
+ AND table_name = 'vehicle_devices' 
+
+  [1m[36m (0.5ms)[0m  [1m
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'card_purches'
+ [0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `card_purches`
+  [1m[36m (0.6ms)[0m  [1m
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'line_devices'
+ [0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `line_devices`
+  [1m[36m (0.4ms)[0m  [1m
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'lines'
+ [0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `lines`
+  [1m[36m (0.4ms)[0m  [1m
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'transport_card_types'
+ [0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `transport_card_types`
+  [1m[36m (0.4ms)[0m  [1m
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'users'
+ [0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36m (0.4ms)[0m  [1m
+ SELECT fk.referenced_table_name as 'to_table'
+ ,fk.referenced_column_name as 'primary_key'
+ ,fk.column_name as 'column'
+ ,fk.constraint_name as 'name'
+ FROM information_schema.key_column_usage fk
+ WHERE fk.referenced_column_name is not null
+ AND fk.table_schema = 'TicKey'
+ AND fk.table_name = 'vehicle_devices'
+ [0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `vehicle_devices`
