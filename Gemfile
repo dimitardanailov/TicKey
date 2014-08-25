@@ -33,6 +33,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+#RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
+gem 'rails_admin'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -41,7 +44,7 @@ end
 # https://github.com/pinnymz/migration_comments
 gem 'migration_comments'
 
-# https://github.com/matthuhiggins/foreigner
+# add foreign keys in migrations https://github.com/matthuhiggins/foreigner
 gem 'foreigner'
 
 # https://github.com/amatsuda/kaminari
@@ -68,6 +71,6 @@ group :production do
 
   # required for FCGI wrapper
   # gem 'fcgi'
-  
+
   gem 'rails_12factor'
 end
