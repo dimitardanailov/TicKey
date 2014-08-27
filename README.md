@@ -6,7 +6,39 @@ http://tickey.herokuapp.com/
 Admin Panel
 ==========
 
-http://tickey.herokuapp.com/admin
+http://tickey.herokuapp.com/:lang/admin
+- params[:lang]
+
+Users:
+
+http://tickey.herokuapp.com/:lang/admin/user
+- params[:lang]
+
+Lines:
+
+http://tickey.herokuapp.com/:lang/admin/line
+- params[:lang]
+
+Line Devies:
+
+http://tickey.herokuapp.com/:lang/admin/line_device
+- params[:lang]
+
+Transport Card Types:
+
+http://tickey.herokuapp.com/:lang/admin/transport_card_type
+- params[:lang]
+
+Vehicle Devices
+
+http://tickey.herokuapp.com/:lang/admin/vehicle_device
+- params[:lang]
+
+Card Purchases
+
+http://tickey.herokuapp.com/:lang/admin/card_purch
+- params[:lang]
+
 
 CMS:
 ==========

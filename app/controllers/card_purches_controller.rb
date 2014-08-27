@@ -156,8 +156,12 @@ class CardPurchesController < ApplicationController
 
     puts YAML::dump card_purches
     if json_error.blank?
+      json_success = {
+        HTTP_CODE: 200,
+        active_tickets: card_purches
+      }
       respond_to do |format|
-        format.json { render :json => card_purches , :status => 200 }
+        format.json { render :json =>  json_success , :status => 200 }
       end
     else
       respond_to do |format|

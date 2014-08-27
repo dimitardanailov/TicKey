@@ -7,13 +7,13 @@ module Request
   end
 
   def self.repond_to_with(object)
-    json_succes = {
+    json_success = {
       HTTP_CODE: 200,
       user: object
     }
 
     respond_to do |format|
-      format.json { render :json => json_succes , :status => 200 }
+      format.json { render :json => json_success , :status => 200 }
     end
   end
 
