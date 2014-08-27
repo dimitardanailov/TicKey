@@ -40,40 +40,6 @@ http://tickey.herokuapp.com/:lang/admin/card_purch
 - params[:lang]
 
 
-CMS:
-==========
-
-Users:
-
-http://tickey.herokuapp.com/:lang/cms/users
-- params[:lang]
-
-Lines:
-
-http://tickey.herokuapp.com/:lang/cms/lines
-- params[:lang]
-
-Line Devies:
-
-http://tickey.herokuapp.com/:lang/cms/line_devices
-- params[:lang]
-
-Transport Card Types:
-
-http://tickey.herokuapp.com/:lang/cms/transport_card_types
-- params[:lang]
-
-Vehicle Devices
-
-http://tickey.herokuapp.com/:lang/cms/vehicle_devices
-- params[:lang]
-
-Card Purchases
-
-http://tickey.herokuapp.com/:lang/cms/card_purches
-- params[:lang]
-
-
 JSON Examples Get:
 ==========
 
