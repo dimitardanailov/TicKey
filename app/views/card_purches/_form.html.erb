@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.select :user_id, @user_options %>
   </div>
   <div class="field">
     <%= f.label :transport_card_type_id %><br>
-    <%= f.number_field :transport_card_type_id %>
+    <%= f.select :transport_card_type_id, @transport_card_type_options %>
   </div>
   <div class="field">
     <%= f.label :line_id %><br>
-    <%= f.number_field :line_id %>
+    <%= f.select :line_id, @line_options %>
   </div>
   <div class="field">
     <%= f.label :expire_date %><br>

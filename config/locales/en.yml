@@ -70,12 +70,12 @@ en:
     invalid_request_params: "Invalid request params"
     invalid_mobile_key: "Invalid mobile key"
     member_is_inactive: "Member is inactive"
-    record_cant_be_created: "Database record can't be create or update"
+    record_cant_be_created: "Database record can't be created or updated"
     user_doesnt_exist_into_our_database: "Member doesn’t exitst"
     user_is_inactive: "Member is inactive"
     user_exist_into_db: "Email address exist into our database"
     email_is_not_register_into_your_system: "Your email address is not defined into our database"
     email_is_invalid: "Sorry, but this email is invalid"
     user_cant_be_saved: "User can't be saved into our database"
-    uuid_invalid_database_info: Sorry, but for this uuid we not any information
+    uuid_invalid_database_info: "Sorry, but for this uuid we not any information"
 # Json Errors

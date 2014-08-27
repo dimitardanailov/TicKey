@@ -1,0 +1,9 @@
+bg:
+  activerecord:
+    attributes:
+      user:
+        email: "Е-поща"
+
+
+
+

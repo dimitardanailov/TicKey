@@ -99,7 +99,7 @@ class UsersController < ApplicationController
   # User register by user call
   def register_user
     #load_testing_register_details
-    
+
     # Trim user params
     params.trim_params
 

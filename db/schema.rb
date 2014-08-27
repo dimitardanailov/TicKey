@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509204518) do
+ActiveRecord::Schema.define(version: 20140825095641) do
 
   create_table "card_purches", force: true do |t|
     t.integer  "user_id",                null: false
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(version: 20140509204518) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "line_devices", ["line_id"], name: "line_devices_line_id_fk", using: :btree
+  add_index "line_devices", ["vehicle_device_id"], name: "line_devices_vehicle_device_id_fk", using: :btree
 
   create_table "lines", force: true do |t|
     t.string   "name",                               null: false
@@ -69,5 +72,8 @@ ActiveRecord::Schema.define(version: 20140509204518) do
   add_foreign_key "card_purches", "lines", name: "card_purches_line_id_fk", dependent: :delete
   add_foreign_key "card_purches", "transport_card_types", name: "card_purches_transport_card_type_id_fk", dependent: :delete
   add_foreign_key "card_purches", "users", name: "card_purches_user_id_fk", dependent: :delete
+
+  add_foreign_key "line_devices", "lines", name: "line_devices_line_id_fk", dependent: :delete
+  add_foreign_key "line_devices", "vehicle_devices", name: "line_devices_vehicle_device_id_fk", dependent: :delete
 
 end

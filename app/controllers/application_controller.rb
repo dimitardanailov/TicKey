@@ -4,13 +4,18 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :set_locale
 
-  # Check and set locale. If you locale is doesn't exist will be use default_locale
+  # Check and set locale. If locale doesn't exist will use default_locale
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end
 
+  # set locale to I18n.locale when automatically generating urls
+  def default_url_options(options = {})
+    { locale: I18n.locale }
+  end
+
   # Helper methods
-  
+
   # Check param_keys existing into global @params variable
   # Params:
   # +param_keys+:: Array with all params must be existed
@@ -70,3 +75,7 @@ class ApplicationController < ActionController::Base
     raise ActionController::RoutingError.new('Not Found')
   end
 end
+
+
+
+
