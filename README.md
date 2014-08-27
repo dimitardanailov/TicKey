@@ -45,7 +45,8 @@ http://tickey.herokuapp.com/:lang/cms/card_purches
 JSON Examples Get:
 ==========
 
-http://tickey.herokuapp.com/transport_card_types.json
+http://tickey.herokuapp.com/:lang/cms/transport_card_types.json
+- parmas[:lang]
 
 http://tickey.herokuapp.com/:lang/vehicle_devices/line_name_by_uuid/:uuid.json
 - params[:lang]
