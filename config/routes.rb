@@ -36,11 +36,10 @@ TicKey::Application.routes.draw do
 
     namespace :api do
       scope "/users" do
-#       post "/authenticate" => "users#authenticate",
-#         as: :user_authenticate
-
-      get "/authenticate/email/:email/password/:password" => "users#authenticate",
+       post "/authenticate" => "users#authenticate",
          as: :user_authenticate
+
+        get "/authenticate/email/:email/password/:password" => "users#authenticate"
 
         post "/register_user" => "users#register_user",
           as: :user_register
