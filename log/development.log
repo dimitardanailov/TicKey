@@ -51792,3 +51792,698 @@ Can't verify CSRF token authenticity
   [1m[35mSQL (15.7ms)[0m  INSERT INTO `users` (`created_at`, `email`, `first_name`, `last_name`, `password`, `pin`, `updated_at`) VALUES ('2014-08-28 12:44:00', 'd.danailov@158lhgrrtd.co', 'Dimitar', 'Danailov', 'test', '881222', '2014-08-28 12:44:00')
   [1m[36m (59.1ms)[0m  [1mCOMMIT[0m
 Completed 200 OK in 116ms (Views: 0.3ms | ActiveRecord: 102.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-28 16:25:07 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 336ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-08-28 16:25:16 +0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `card_purches`
+  [1m[36mCardPurch Load (0.2ms)[0m  [1mSELECT `card_purches`.* FROM `card_purches` ORDER BY card_purches.updated_at desc LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `lines`
+  [1m[36mLine Load (0.2ms)[0m  [1mSELECT `lines`.* FROM `lines` ORDER BY lines.updated_at desc LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `line_devices`
+  [1m[36mLineDevice Load (0.2ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` ORDER BY line_devices.updated_at desc LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `transport_card_types`
+  [1m[36mTransportCardType Load (0.4ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY transport_card_types.updated_at desc LIMIT 1[0m
+  [1m[35m (36.1ms)[0m  SELECT COUNT(*) FROM `users`
+  [1m[36mUser Load (15.2ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY users.updated_at desc LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `vehicle_devices`
+  [1m[36mVehicleDevice Load (0.2ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` ORDER BY vehicle_devices.updated_at desc LIMIT 1[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (101.5ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/layouts/rails_admin/_secondary_navigation.html.haml (19.4ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/layouts/rails_admin/pjax.html.haml (9.0ms)
+Completed 200 OK in 1721ms (Views: 732.9ms | ActiveRecord: 580.7ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-08-28 16:25:18 +0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:18 +0300
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:18 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:18 +0300
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:18 +0300
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:18 +0300
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:18 +0300
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:19 +0300
+
+
+Started GET "/admin/card_purch?locale=en" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"en", "model_name"=>"card_purch"}
+  [1m[35mCardPurch Load (0.2ms)[0m  SELECT `card_purches`.* FROM `card_purches` ORDER BY card_purches.id desc LIMIT 20 OFFSET 0
+  [1m[36mUser Load (22.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1)[0m
+  [1m[35mTransportCardType Load (0.3ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` WHERE `transport_card_types`.`id` IN (1)
+  [1m[36mLine Load (0.2ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` IN (3)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `card_purches`
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (320.5ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/layouts/rails_admin/_secondary_navigation.html.haml (1.6ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/layouts/rails_admin/pjax.html.haml (10.3ms)
+Completed 200 OK in 422ms (Views: 381.0ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:31 +0300
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:32 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-28 16:25:40 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/railties-4.0.3/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cms/users" for 127.0.0.1 at 2014-08-28 16:25:45 +0300
+
+ActionController::RoutingError (No route matches [GET] "/cms/users"):
+  actionpack (4.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.3) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.3) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.3) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.3) lib/rails/engine.rb:511:in `call'
+  railties (4.0.3) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/plamena/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/plamena/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/plamena/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (23.5ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (84.4ms)
+
+
+Started GET "/en/admin/card_purch?locale=en" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"en", "model_name"=>"card_purch"}
+  [1m[36mCardPurch Load (0.2ms)[0m  [1mSELECT `card_purches`.* FROM `card_purches` ORDER BY card_purches.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IN (1)
+  [1m[36mTransportCardType Load (0.2ms)[0m  [1mSELECT `transport_card_types`.* FROM `transport_card_types` WHERE `transport_card_types`.`id` IN (1)[0m
+  [1m[35mLine Load (0.2ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` IN (3)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `card_purches`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (86.8ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/layouts/rails_admin/_secondary_navigation.html.haml (1.6ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/layouts/rails_admin/pjax.html.haml (11.3ms)
+Completed 200 OK in 170ms (Views: 143.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:56 +0300
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-08-28 16:25:57 +0300
+
+
+Started GET "/en/admin/line?locale=en&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-08-28 16:25:58 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"en", "_pjax"=>"[data-pjax-container]", "model_name"=>"line"}
+  [1m[35mLine Load (0.2ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY lines.id desc LIMIT 20 OFFSET 0
+  [1m[36mLineDevice Load (0.5ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`line_id` = 3[0m
+  [1m[35mLineDevice Load (0.2ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`line_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `lines`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (112.3ms)
+Completed 200 OK in 137ms (Views: 127.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/bg/admin/line?locale=en" for 127.0.0.1 at 2014-08-28 16:26:16 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"bg", "model_name"=>"line"}
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY lines.id desc LIMIT 20 OFFSET 0
+  [1m[36mLineDevice Load (0.2ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`line_id` = 3[0m
+  [1m[35mLineDevice Load (0.2ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`line_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `lines`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (93.5ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/layouts/rails_admin/_secondary_navigation.html.haml (6.4ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/layouts/rails_admin/pjax.html.haml (15.2ms)
+Completed 200 OK in 181ms (Views: 173.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ra.i18n.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2014-08-28 16:26:17 +0300
+
+
+Started GET "/bg/admin/line_device?locale=bg&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-08-28 16:26:26 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"bg", "_pjax"=>"[data-pjax-container]", "model_name"=>"line_device"}
+  [1m[35mLineDevice Load (0.3ms)[0m  SELECT `line_devices`.* FROM `line_devices` ORDER BY line_devices.id desc LIMIT 20 OFFSET 0
+  [1m[36mLine Load (0.2ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` IN (2)[0m
+  [1m[35mVehicleDevice Load (0.2ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` IN (1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `line_devices`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (49.3ms)
+Completed 200 OK in 74ms (Views: 64.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bg/admin/transport_card_type?locale=bg&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-08-28 16:26:28 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"bg", "_pjax"=>"[data-pjax-container]", "model_name"=>"transport_card_type"}
+  [1m[35mTransportCardType Load (0.2ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY transport_card_types.id desc LIMIT 20 OFFSET 0
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM `transport_card_types`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (67.6ms)
+Completed 200 OK in 95ms (Views: 83.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bg/admin/user?locale=bg&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-08-28 16:26:31 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"bg", "_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` ORDER BY users.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (126.5ms)
+Completed 200 OK in 157ms (Views: 145.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bg/admin/line?locale=bg&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-08-28 16:26:33 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"bg", "_pjax"=>"[data-pjax-container]", "model_name"=>"line"}
+  [1m[35mLine Load (0.3ms)[0m  SELECT `lines`.* FROM `lines` ORDER BY lines.id desc LIMIT 20 OFFSET 0
+  [1m[36mLineDevice Load (0.2ms)[0m  [1mSELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`line_id` = 3[0m
+  [1m[35mLineDevice Load (0.2ms)[0m  SELECT `line_devices`.* FROM `line_devices` WHERE `line_devices`.`line_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `lines`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (65.6ms)
+Completed 200 OK in 94ms (Views: 83.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bg/admin/line_device?locale=bg&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-08-28 16:31:38 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"bg", "_pjax"=>"[data-pjax-container]", "model_name"=>"line_device"}
+  [1m[35mLineDevice Load (0.3ms)[0m  SELECT `line_devices`.* FROM `line_devices` ORDER BY line_devices.id desc LIMIT 20 OFFSET 0
+  [1m[36mLine Load (0.2ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` IN (2)[0m
+  [1m[35mVehicleDevice Load (0.2ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`id` IN (1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `line_devices`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (98.3ms)
+Completed 200 OK in 183ms (Views: 108.1ms | ActiveRecord: 44.8ms)
+
+
+Started GET "/bg/admin/transport_card_type?locale=bg&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2014-08-28 16:31:39 +0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"locale"=>"bg", "_pjax"=>"[data-pjax-container]", "model_name"=>"transport_card_type"}
+  [1m[35mTransportCardType Load (0.2ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` ORDER BY transport_card_types.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `transport_card_types`[0m
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/rails_admin-0.6.3/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (70.5ms)
+Completed 200 OK in 127ms (Views: 86.5ms | ActiveRecord: 2.4ms)
