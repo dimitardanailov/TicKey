@@ -1,9 +1,15 @@
 TicKey::Application.routes.draw do
 
-  #rails_admin routes
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+#  get "users/authenticate"
+#  get "users/register_user"
+ #get "transport_card_types/index"
+ resources :transport_card_types
 
   scope "(/:locale)", locale: /en|bg/ do
+
+    #rails_admin routes
+    mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
     scope "/users" do
       post "/authenticate" => "users#authenticate",
         as: :user_authenticate
@@ -11,6 +17,8 @@ TicKey::Application.routes.draw do
       post "/register_user" => "users#register_user",
         as: :user_register
     end # end scope users
+
+
 
     scope "/vehicle_devices" do
       get "line_name_by_uuid/:uuid" => "vehicle_devices#get_line_name_by_uuid"
@@ -24,18 +32,31 @@ TicKey::Application.routes.draw do
       post "make_order" => "card_purches#make_card_purches"
     end # end scope card purchases
 
-    scope "/cms" do
-      resources :card_purches
 
-      resources :line_devices
 
-      resources :lines
+    namespace :api do
+      scope "/users" do
+       post "/authenticate" => "users#authenticate",
+         as: :user_authenticate
 
-      resources :vehicle_devices
+        post "/register_user" => "users#register_user",
+          as: :user_register
+      end # end scope users
+    end # end of namespace api
 
-      resources :transport_card_types
+#    scope "/cms" do
+#      resources :card_purches
+#
+#      resources :line_devices
+#
+#      resources :lines
+#
+#      resources :vehicle_devices
+#
+#      resources :transport_card_types
+#
+#      resources :users
+#    end # end scope cms
 
-      resources :users
-    end # end scope cms
   end # end scope locales
 end

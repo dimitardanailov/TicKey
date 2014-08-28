@@ -74,6 +74,19 @@ class ApplicationController < ActionController::Base
   def page_not_found
     raise ActionController::RoutingError.new('Not Found')
   end
+
+#### api controllers methods ###############################
+
+  def request_has_valid_keys?(param_keys, request_params)
+    param_keys.each do |param|
+      return false unless request_params.has_key?(param)
+    end
+
+      return true
+  end
+
+############################################################
+
 end
 
 

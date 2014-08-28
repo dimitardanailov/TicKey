@@ -6,46 +6,45 @@ http://tickey.herokuapp.com/
 Admin Panel
 ==========
 
-http://tickey.herokuapp.com/admin
-
-CMS:
-==========
+http://tickey.herokuapp.com/:lang/admin
+- params[:lang]
 
 Users:
 
-http://tickey.herokuapp.com/:lang/cms/users
+http://tickey.herokuapp.com/:lang/admin/user
 - params[:lang]
 
 Lines:
 
-http://tickey.herokuapp.com/:lang/cms/lines
+http://tickey.herokuapp.com/:lang/admin/line
 - params[:lang]
 
 Line Devies:
 
-http://tickey.herokuapp.com/:lang/cms/line_devices
+http://tickey.herokuapp.com/:lang/admin/line_device
 - params[:lang]
 
 Transport Card Types:
 
-http://tickey.herokuapp.com/:lang/cms/transport_card_types
+http://tickey.herokuapp.com/:lang/admin/transport_card_type
 - params[:lang]
 
 Vehicle Devices
 
-http://tickey.herokuapp.com/:lang/cms/vehicle_devices
+http://tickey.herokuapp.com/:lang/admin/vehicle_device
 - params[:lang]
 
 Card Purchases
 
-http://tickey.herokuapp.com/:lang/cms/card_purches
+http://tickey.herokuapp.com/:lang/admin/card_purch
 - params[:lang]
 
 
 JSON Examples Get:
 ==========
 
-http://tickey.herokuapp.com/transport_card_types.json
+http://tickey.herokuapp.com/:lang/cms/transport_card_types.json
+- parmas[:lang]
 
 http://tickey.herokuapp.com/:lang/vehicle_devices/line_name_by_uuid/:uuid.json
 - params[:lang]

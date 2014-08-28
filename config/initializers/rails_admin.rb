@@ -31,4 +31,12 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'TransportCardType' do
+    list do
+      include_all_fields
+      exclude_fields :card_purches
+    end
+  end
+
 end
