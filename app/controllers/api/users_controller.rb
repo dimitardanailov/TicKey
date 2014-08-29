@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
     # Trim user params
     params.trim_params
 
-    if request_has_valid_keys?(valid_keys, params)
+    if params_keys_exist_in_request?(valid_keys, params)
       user = find_user(params[:email], params[:password])
       if user.blank?
         response = Api::ErrorResponse.user_doesnt_exist_into_our_database
@@ -29,7 +29,7 @@ class Api::UsersController < ApplicationController
     # Trim user params
     params.trim_params
 
-    if request_has_valid_keys?(valid_keys, params)
+    if params_keys_exist_in_request?(valid_keys, params)
       if User.find_by(email: params[:email])
         response = Api::ErrorResponse.user_exists_in_database
       else

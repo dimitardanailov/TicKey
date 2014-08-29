@@ -4,7 +4,7 @@ class Api::CardPurchasesController < ApplicationController
 
   def make_card_purchase
     param_keys = ["user_id", "line_name", "card_type"]
-    params_are_valid = check_params_keys_exist_into_request(param_keys, params)
+    params_are_valid = params_keys_exist_in_request?(param_keys, params)
 
     if params_are_valid
       response = proccess_order_and_return_response(params)
@@ -19,7 +19,7 @@ class Api::CardPurchasesController < ApplicationController
 
   def get_active_tickets_by_uuid_and_user
     param_keys = ["user_id", "uuid"]
-    params_are_valid = check_params_keys_exist_into_request(param_keys, params)
+    params_are_valid = params_keys_exist_in_request?(param_keys, params)
 
     if params_are_valid
       user_id = params[:user_id]
@@ -63,7 +63,6 @@ class Api::CardPurchasesController < ApplicationController
         user = User.find(params[:user_id]) if User.exists?(params[:user_id])
         if user
           order = user.card_purches.build
-
           order[:expire_date] = CardPurch.generate_expire_date
 
           # Get line info

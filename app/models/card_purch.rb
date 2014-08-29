@@ -29,7 +29,7 @@ class CardPurch < ActiveRecord::Base
   end
 
   # Get count of active user purches by line id
-  # Method will use group by user id. User who has biggest active purches will be 
+  # Method will use group by user id. User who has biggest active purches will be
   # placed into first place
   def self.get_count_of_user_active_purches_by_line_id(line_id)
     expire_date = Time.now
