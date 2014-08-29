@@ -42,6 +42,18 @@ TicKey::Application.routes.draw do
         post "/register_user" => "users#register_user",
           as: :user_register
       end # end scope users
+
+      scope "/card_purches" do
+        get "user_active_cards/:user_id/:uuid" => "card_purchases#get_active_tickets_by_uuid_and_user",
+          :constraints => { :user_id => /\d+/ }
+
+        post "make_order" => "card_purchases#make_card_purchase"
+
+# curl --data "user_id=1&line_name=line 1&card_type=1 ticket" http://localhost:3000/en/api/card_purches/make_order
+# http://localhost:3000/en/api/card_purches/user_active_cards/:user_id/:uuid
+
+      end # end scope card purchases
+
     end # end of namespace api
 
 #    scope "/cms" do

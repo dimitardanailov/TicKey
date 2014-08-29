@@ -24,6 +24,11 @@ module TicKey
     # Set list of available locales
     config.i18n.available_locales = ['en']
 
+
+   # auto-load custom folders in models
+   # config.autoload_paths += Dir[ Rails.root.join('app', 'models', '**/') ]
+
+
     # Object with all necessary folders to include
     include_necessary_folders = {
       # Include classes add more fuctions to standart Ruby and Rails Classes.

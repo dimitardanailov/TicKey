@@ -16,6 +16,8 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  config.included_models = ['User', 'CardPurch', 'Line', 'LineDevice', 'TransportCardType', 'VehicleDevice']
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
