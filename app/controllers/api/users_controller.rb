@@ -46,26 +46,28 @@ class Api::UsersController < ApplicationController
 
   private
 
-    # authenticate helper methods
-    def find_user(email, password)
-      user = User
-        .select("id, first_name, last_name")
-        .where("email = ? AND password = ?", email, password)
-        .first
-    end
+  # authenticate helper methods
+  def find_user(email, password)
+    user = User
+      .select("id, first_name, last_name")
+      .where("email = ? AND password = ?", email, password)
+      .first
+  end
 
-    # register helper methods
-    def save_user_and_return_response(attributes, params)
-      user = User.new
-      attributes.each do |key|
-        user[key] = params[key]
-      end
+  # register helper methods
+  def save_user_and_return_response(attributes, params)
+    user = User.new
+    attributes.each { |key| user[key] = params[key] }
 
+    begin
       if user.save
         cleared_user = user.clear_unsed_attributes(user)
         return Api::SuccessResponse.new(cleared_user)
       else
         return Api::ErrorResponse.database_record_cant_be_created_or_updated
       end
+    rescue Exception => e
+      return Api::ErrorResponse.internal_server_error
     end
+  end
 end

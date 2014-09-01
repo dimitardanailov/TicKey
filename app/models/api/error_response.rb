@@ -32,6 +32,10 @@ module Api
       self.new(403, "json_errors.uuid_invalid_database_info")
     end
 
+    def self.internal_server_error
+      self.new(500, "json_errors.internal_server_error")
+    end
+
     # required for ActiveModel::Serializers::JSON
     def attributes
       { http_code: @http_code, message: @message }
