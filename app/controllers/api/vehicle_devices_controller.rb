@@ -49,26 +49,27 @@ class Api::VehicleDevicesController < ApplicationController
   private
 
   # get_vehicle_users helper method
-    def generate_vehicle_info(line)
-      vehicle_info = Hash.new
-      vehicle_info[:line_name] = line[:name]
-      vehicle_info[:users] = []
+  def generate_vehicle_info(line)
+    vehicle_info = Hash.new
+    vehicle_info[:line_name] = line[:name]
+    vehicle_info[:users] = []
 
-      db_purches = CardPurch.get_count_of_user_active_purches_by_line_id(line[:id])
-      db_purches.each do |ticket_info|
-        if ticket_info[:user_id]
-          user = ticket_info.user
-          if user
-            user_info = Hash.new
-            user_info[:active_cards_count] = ticket_info[:active_purches]
-            user_info[:first_name] = user[:first_name]
-            user_info[:last_name] = user[:last_name]
-            user_info[:pin] = user[:pin]
+    db_purches = CardPurch.get_count_of_user_active_purches_by_line_id(line[:id])
+    db_purches.each do |ticket_info|
+      if ticket_info[:user_id]
+        user = ticket_info.user
+        if user
+          user_info = Hash.new
+          user_info[:active_cards_count] = ticket_info[:active_purches]
+          user_info[:email] = user[:email]
+          user_info[:first_name] = user[:first_name]
+          user_info[:last_name] = user[:last_name]
+          user_info[:pin] = user[:pin]
 
-            vehicle_info[:users].push(user_info)
-          end
+          vehicle_info[:users].push(user_info)
         end
       end
-      return vehicle_info
     end
+    return vehicle_info
+  end
 end

@@ -61845,3 +61845,165 @@ Processing by Api::CardPurchasesController#get_active_tickets_by_uuid_and_user a
   [1m[35mCACHE (0.0ms)[0m  SELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 3 ORDER BY `lines`.`id` ASC LIMIT 1  [["id", 3]]
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE `lines`.`id` = 3 ORDER BY `lines`.`id` ASC LIMIT 1[0m  [["id", 3]]
 Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 1.2ms)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`id` = 54 LIMIT 1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`id` = 0 LIMIT 1
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`id` = 4 LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 32 LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`id` = 541 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/en/api/vehicle_devices/get_vehicle_users/f7826da6-4fa2-4e98-8024-bc5b71e0893e.jso" for 127.0.0.1 at 2014-09-01 09:32:09 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Api::VehicleDevicesController#get_vehicle_users as 
+  Parameters: {"locale"=>"en", "uuid"=>"f7826da6-4fa2-4e98-8024-bc5b71e0893e"}
+  [1m[35mVehicleDevice Load (0.5ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'f7826da6-4fa2-4e98-8024-bc5b71e0893e' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 406 Not Acceptable in 194ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/api/vehicle_devices_controller.rb:44:in `get_vehicle_users'
+
+
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/plamena/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.9ms)
+
+
+Started GET "/en/api/vehicle_devices/get_vehicle_users/f7826da6-4fa2-4e98-8024-bc5b71e0893e.json" for 127.0.0.1 at 2014-09-01 09:32:16 +0300
+Processing by Api::VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"f7826da6-4fa2-4e98-8024-bc5b71e0893e"}
+  [1m[36mVehicleDevice Load (0.2ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'f7826da6-4fa2-4e98-8024-bc5b71e0893e' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+Completed 403 Forbidden in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/en/api/card_purches/user_active_cards/131/213asdasd.json" for 127.0.0.1 at 2014-09-01 09:36:52 +0300
+Processing by Api::CardPurchasesController#get_active_tickets_by_uuid_and_user as JSON
+  Parameters: {"locale"=>"en", "user_id"=>"131", "uuid"=>"213asdasd"}
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`id` = 131 LIMIT 1
+Completed 403 Forbidden in 420ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/en/api/card_purches/user_active_cards/311/213asdasd.json" for 127.0.0.1 at 2014-09-01 09:37:03 +0300
+Processing by Api::CardPurchasesController#get_active_tickets_by_uuid_and_user as JSON
+  Parameters: {"locale"=>"en", "user_id"=>"311", "uuid"=>"213asdasd"}
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`id` = 311 LIMIT 1[0m
+Completed 403 Forbidden in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+DEPRECATION WARNING: Passing options to #find is deprecated. Please build a scope and then call #find on it. (called from irb_binding at (irb):2)
+  [1m[35mUser Load (28.5ms)[0m  SELECT `users`.* FROM `users` WHERE `id`.`select` = '* from users where id=4 --' LIMIT 1
+Mysql2::Error: Unknown column 'id.select' in 'where clause': SELECT  `users`.* FROM `users`  WHERE `id`.`select` = '* from users where id=4 --' LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `id`.`select` = '* from users where id=4 --' LIMIT 1[0m
+Mysql2::Error: Unknown column 'id.select' in 'where clause': SELECT  `users`.* FROM `users`  WHERE `id`.`select` = '* from users where id=4 --' LIMIT 1
+  [1m[35mUser Load (1.2ms)[0m  SELECT `users`.* FROM `users` WHERE `id`.`select` = '* from users where id=4 --' LIMIT 1
+Mysql2::Error: Unknown column 'id.select' in 'where clause': SELECT  `users`.* FROM `users`  WHERE `id`.`select` = '* from users where id=4 --' LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `id`.`select` = '* from users where id=4 --' LIMIT 1
+Mysql2::Error: Unknown column 'id.select' in 'where clause': SELECT  `users`.* FROM `users`  WHERE `id`.`select` = '* from users where id=4 --' LIMIT 1
+  [1m[36mUser Load (16.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 432 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+
+
+Started POST "/en/api/users/register_user.json" for 127.0.0.1 at 2014-09-01 14:14:59 +0300
+Processing by Api::UsersController#register_user as JSON
+  Parameters: {"email"=>"d.danailov@158ltd.co", "password"=>"[FILTERED]", "first_name"=>"Dimitar", "last_name"=>"Danailov", "pin"=>"881222", "locale"=>"en"}
+Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'd.danailov@158ltd.co' LIMIT 1
+Completed 402 Payment Required in 113ms (Views: 0.3ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/en/api/users/register_user.json" for 127.0.0.1 at 2014-09-01 14:15:12 +0300
+Processing by Api::UsersController#register_user as JSON
+  Parameters: {"email"=>"dfa@158ltd.co", "password"=>"[FILTERED]", "first_name"=>"Dimitar", "last_name"=>"Danailov", "pin"=>"881222", "locale"=>"en"}
+Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'dfa@158ltd.co' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (61.9ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'dfa@158ltd.co' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'dfa@158ltd.co' LIMIT 1
+  [1m[36mSQL (135.6ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `first_name`, `last_name`, `password`, `pin`, `updated_at`) VALUES ('2014-09-01 11:15:12', 'dfa@158ltd.co', 'Dimitar', 'Danailov', 'test', '881222', '2014-09-01 11:15:12')[0m
+  [1m[35m (51.8ms)[0m  COMMIT
+Completed 200 OK in 355ms (Views: 0.3ms | ActiveRecord: 250.1ms)
+
+
+Started POST "/en/api/users/register_user.json" for 127.0.0.1 at 2014-09-01 14:17:20 +0300
+Processing by Api::UsersController#register_user as JSON
+  Parameters: {"email"=>"df432a@158ltd.co", "password"=>"[FILTERED]", "first_name"=>"re", "last_name"=>"ilov", "pin"=>"881222", "locale"=>"en"}
+Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'df432a@158ltd.co' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'df432a@158ltd.co' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'df432a@158ltd.co' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `first_name`, `last_name`, `password`, `pin`, `updated_at`) VALUES ('2014-09-01 11:17:20', 'df432a@158ltd.co', 're', 'ilov', 'test', '881222', '2014-09-01 11:17:20')[0m
+  [1m[35m (42.2ms)[0m  COMMIT
+Completed 200 OK in 81ms (Views: 1.0ms | ActiveRecord: 45.7ms)
+
+
+Started POST "/en/api/card_purches/make_order.json" for 127.0.0.1 at 2014-09-01 14:19:42 +0300
+Processing by Api::CardPurchasesController#make_card_purchase as JSON
+  Parameters: {"user_id"=>"1", "line_name"=>"31A", "card_type"=>"1ticket", "locale"=>"en"}
+Can't verify CSRF token authenticity
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mLine Load (0.4ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE (name = '31A') ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.4ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = '1ticket') ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 403 Forbidden in 285ms (Views: 0.4ms | ActiveRecord: 22.9ms)
+
+
+Started POST "/en/api/card_purches/make_order.json" for 127.0.0.1 at 2014-09-01 14:19:58 +0300
+Processing by Api::CardPurchasesController#make_card_purchase as JSON
+  Parameters: {"user_id"=>"1", "line_name"=>"31A", "card_type"=>"1 ticket", "locale"=>"en"}
+Can't verify CSRF token authenticity
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mLine Load (0.2ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE (name = '31A') ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.4ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = '1 ticket') ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 403 Forbidden in 17ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/en/api/card_purches/make_order.json" for 127.0.0.1 at 2014-09-01 14:20:09 +0300
+Processing by Api::CardPurchasesController#make_card_purchase as JSON
+  Parameters: {"user_id"=>"1", "line_name"=>"line 1", "card_type"=>"1 ticket", "locale"=>"en"}
+Can't verify CSRF token authenticity
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mLine Load (0.5ms)[0m  [1mSELECT `lines`.* FROM `lines` WHERE (name = 'line 1') ORDER BY `lines`.`id` ASC LIMIT 1[0m
+  [1m[35mTransportCardType Load (0.2ms)[0m  SELECT `transport_card_types`.* FROM `transport_card_types` WHERE (name = '1 ticket') ORDER BY `transport_card_types`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `card_purches` (`created_at`, `expire_date`, `line_id`, `transport_card_type_id`, `updated_at`, `user_id`) VALUES ('2014-09-01 11:20:09', '2014-09-03 11:20:09', 3, 1, '2014-09-01 11:20:09', 1)
+  [1m[36m (42.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 64ms (Views: 0.5ms | ActiveRecord: 44.9ms)
+
+
+Started GET "/en/api/vehicle_devices/get_vehicle_users/f7826da6-4fa2-4e98-8024-bc5b71e0893e.json" for 127.0.0.1 at 2014-09-01 14:20:51 +0300
+Processing by Api::VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"f7826da6-4fa2-4e98-8024-bc5b71e0893e"}
+  [1m[35mVehicleDevice Load (0.2ms)[0m  SELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = 'f7826da6-4fa2-4e98-8024-bc5b71e0893e' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1
+Completed 403 Forbidden in 28ms (Views: 0.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/en/api/vehicle_devices/get_vehicle_users/1111.json" for 127.0.0.1 at 2014-09-01 14:20:57 +0300
+Processing by Api::VehicleDevicesController#get_vehicle_users as JSON
+  Parameters: {"locale"=>"en", "uuid"=>"1111"}
+  [1m[36mVehicleDevice Load (3.3ms)[0m  [1mSELECT `vehicle_devices`.* FROM `vehicle_devices` WHERE `vehicle_devices`.`unique_id` = '1111' ORDER BY `vehicle_devices`.`id` ASC LIMIT 1[0m
+  [1m[35mLine Load (21.5ms)[0m  SELECT `lines`.* FROM `lines` INNER JOIN `line_devices` ON `lines`.`id` = `line_devices`.`line_id` WHERE `line_devices`.`vehicle_device_id` = 2 ORDER BY `lines`.`id` ASC LIMIT 1
+  [1m[36mCardPurch Load (17.6ms)[0m  [1mSELECT COUNT(user_id) as active_purches, user_id FROM `card_purches` WHERE (line_id = 3 AND expire_date >= '2014-09-01 11:20:57') GROUP BY user_id ORDER BY active_purches DESC[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+Completed 200 OK in 168ms (Views: 0.5ms | ActiveRecord: 43.9ms)

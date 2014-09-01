@@ -78,4 +78,5 @@ en:
     email_is_invalid: "Sorry, but this email is invalid"
     user_cant_be_saved: "User can't be saved into our database"
     uuid_invalid_database_info: "Sorry, we don’t have information about this uuid"
+    internal_server_error: "Intenal server error."
 # Json Errors
