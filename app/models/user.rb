@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   # Used by the rails-admin gem - display name() intead of
   # the foreign key in associations.
   def name
-    self.first_name + " " + self.last_name
+    self.email
   end
 
   # Default Values

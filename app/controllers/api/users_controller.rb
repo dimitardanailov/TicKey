@@ -8,15 +8,15 @@ class Api::UsersController < ApplicationController
     # Trim user params
     params.trim_params
 
-    if request_has_valid_keys?(valid_keys, params)
+    if params_keys_exist_in_request?(valid_keys, params)
       user = find_user(params[:email], params[:password])
       if user.blank?
-        response = ApiErrorResponse.user_doesnt_exist_into_our_database
+        response = Api::ErrorResponse.user_doesnt_exist_into_our_database
       else
-        response = ApiSuccessResponse.new(user)
+        response = Api::SuccessResponse.new(user)
       end
     else
-      response = ApiErrorResponse.invalid_request_params
+      response = Api::ErrorResponse.invalid_request_params
     end
 
     respond_to do |format|
@@ -29,14 +29,14 @@ class Api::UsersController < ApplicationController
     # Trim user params
     params.trim_params
 
-    if request_has_valid_keys?(valid_keys, params)
+    if params_keys_exist_in_request?(valid_keys, params)
       if User.find_by(email: params[:email])
-        response = ApiErrorResponse.user_exists_in_database
+        response = Api::ErrorResponse.user_exists_in_database
       else
         response = save_user_and_return_response(valid_keys, params)
       end
     else
-      response = ApiErrorResponse.invalid_request_params
+      response = Api::ErrorResponse.invalid_request_params
     end
 
     respond_to do |format|
@@ -63,9 +63,9 @@ class Api::UsersController < ApplicationController
 
       if user.save
         cleared_user = user.clear_unsed_attributes(user)
-        return ApiSuccessResponse.new(cleared_user)
+        return Api::SuccessResponse.new(cleared_user)
       else
-        return ApiErrorResponse.database_record_cant_be_created_or_updated
+        return Api::ErrorResponse.database_record_cant_be_created_or_updated
       end
     end
 end
